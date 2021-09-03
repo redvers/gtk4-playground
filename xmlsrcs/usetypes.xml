@@ -1,0 +1,687 @@
+<typedefs>
+  <typedef name="String"
+    ponytypein="String"
+    ponytypeinconv=".cstring()"
+    ponytypeout="String"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]">
+    <ponytypeconvout>
+      <prefixs>
+        <prefix>var pcstring: Pointer[U8] = </prefix>
+      </prefixs>
+      <suffixes>
+        <suffix>let p: String iso = String.from_cstring(pcstring).clone()</suffix>
+        <suffix>consume p</suffix>
+      </suffixes>
+    </ponytypeconvout>
+  </typedef>
+
+  <typedef name="Array[String]"
+    ponytypein="Array[String]"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[U8]]"
+    structtype="Pointer[Pointer[U8]]"
+    structdef="Pointer[Pointer[U8]]"
+    argtype="Pointer[Pointer[U8]] tag"
+    rvtype="Pointer[Pointer[U8]]"/>
+
+  <typedef name="NullablePointer[GSignalQuery]"
+    ponytypein="NullablePointer[GSignalQuery] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GSignalQuery]"
+    structtype="NullablePointer[GSignalQuery]"
+    structdef="NullablePointer[GSignalQuery].none()"
+    argtype="NullablePointer[GSignalQuery] tag"
+    rvtype="NullablePointer[GSignalQuery]"/>
+
+  <typedef name="NullablePointer[GtkStyleContext]"
+    ponytypein="NullablePointer[GtkStyleContext] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkStyleContext]"
+    structtype="NullablePointer[GtkStyleContext]"
+    structdef="NullablePointer[GtkStyleContext].none()"
+    argtype="NullablePointer[GtkStyleContext] tag"
+    rvtype="NullablePointer[GtkStyleContext]"/>
+
+  <typedef name="NullablePointer[PangoLanguage]"
+    ponytypein="NullablePointer[PangoLanguage] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoLanguage]"
+    structtype="NullablePointer[PangoLanguage]"
+    structdef="NullablePointer[PangoLanguage].none()"
+    argtype="NullablePointer[PangoLanguage] tag"
+    rvtype="NullablePointer[PangoLanguage]"/>
+
+  <typedef name="U32"
+    ponytypein="U32"
+    ponytypeinconv=""
+    ponytypeout="U32"
+    structtype="U32"
+    structdef="U32(0)"
+    argtype="U32"
+    rvtype="U32"/>
+
+  <typedef name="NullablePointer[GPollFD]"
+    ponytypein="NullablePointer[GPollFD] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GPollFD]"
+    structtype="NullablePointer[GPollFD]"
+    structdef="NullablePointer[GPollFD].none()"
+    argtype="NullablePointer[GPollFD] tag"
+    rvtype="NullablePointer[GPollFD]"/>
+
+  <typedef name="NullablePointer[GtkBuilderScope]"
+    ponytypein="NullablePointer[GtkBuilderScope] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkBuilderScope]"
+    structtype="NullablePointer[GtkBuilderScope]"
+    structdef="NullablePointer[GtkBuilderScope].none()"
+    argtype="NullablePointer[GtkBuilderScope] tag"
+    rvtype="NullablePointer[GtkBuilderScope]"/>
+
+  <typedef name="NullablePointer[GtkWidget]"
+    ponytypein="NullablePointer[GtkWidget] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkWidget]"
+    structtype="NullablePointer[GtkWidget]"
+    structdef="NullablePointer[GtkWidget].none()"
+    argtype="NullablePointer[GtkWidget] tag"
+    rvtype="NullablePointer[GtkWidget]"/>
+
+  <typedef name="NullablePointer[GtkWindow]"
+    ponytypein="NullablePointer[GtkWindow] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkWindow]"
+    structtype="NullablePointer[GtkWindow]"
+    structdef="NullablePointer[GtkWindow].none()"
+    argtype="NullablePointer[GtkWindow] tag"
+    rvtype="NullablePointer[GtkWindow]"/>
+
+  <typedef name="NullablePointer[GValue]"
+    ponytypein="NullablePointer[GValue] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GValue]"
+    structtype="NullablePointer[GValue]"
+    structdef="NullablePointer[GValue].none()"
+    argtype="NullablePointer[GValue] tag"
+    rvtype="NullablePointer[GValue]"/>
+
+  <typedef name="I64"
+    ponytypein="I64"
+    ponytypeinconv=""
+    ponytypeout="I64"
+    structtype="I64"
+    structdef="I64(0)"
+    argtype="I64"
+    rvtype="I64"/>
+
+  <typedef name="NullablePointer[Cairorectangleint]"
+    ponytypein="NullablePointer[Cairorectangleint] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Cairorectangleint]"
+    structtype="NullablePointer[Cairorectangleint]"
+    structdef="NullablePointer[Cairorectangleint].none()"
+    argtype="NullablePointer[Cairorectangleint] tag"
+    rvtype="NullablePointer[Cairorectangleint]"/>
+
+  <typedef name="NullablePointer[GdkDisplay]"
+    ponytypein="NullablePointer[GdkDisplay] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GdkDisplay]"
+    structtype="NullablePointer[GdkDisplay]"
+    structdef="NullablePointer[GdkDisplay].none()"
+    argtype="NullablePointer[GdkDisplay] tag"
+    rvtype="NullablePointer[GdkDisplay]"/>
+
+  <typedef name="NullablePointer[Graphenepointt]"
+    ponytypein="NullablePointer[Graphenepointt] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Graphenepointt]"
+    structtype="NullablePointer[Graphenepointt]"
+    structdef="NullablePointer[Graphenepointt].none()"
+    argtype="NullablePointer[Graphenepointt] tag"
+    rvtype="NullablePointer[Graphenepointt]"/>
+
+  <typedef name="NullablePointer[Valisttag]"
+    ponytypein="NullablePointer[Valisttag] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Valisttag]"
+    structtype="NullablePointer[Valisttag]"
+    structdef="NullablePointer[Valisttag].none()"
+    argtype="NullablePointer[Valisttag] tag"
+    rvtype="NullablePointer[Valisttag]"/>
+
+  <typedef name="NullablePointer[GList]"
+    ponytypein="NullablePointer[GList] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GList]"
+    structtype="NullablePointer[GList]"
+    structdef="NullablePointer[GList].none()"
+    argtype="NullablePointer[GList] tag"
+    rvtype="NullablePointer[GList]"/>
+
+  <typedef name="NullablePointer[GskTransform]"
+    ponytypein="NullablePointer[GskTransform] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GskTransform]"
+    structtype="NullablePointer[GskTransform]"
+    structdef="NullablePointer[GskTransform].none()"
+    argtype="NullablePointer[GskTransform] tag"
+    rvtype="NullablePointer[GskTransform]"/>
+
+  <typedef name="NullablePointer[GtkRequisition]"
+    ponytypein="NullablePointer[GtkRequisition] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkRequisition]"
+    structtype="NullablePointer[GtkRequisition]"
+    structdef="NullablePointer[GtkRequisition].none()"
+    argtype="NullablePointer[GtkRequisition] tag"
+    rvtype="NullablePointer[GtkRequisition]"/>
+
+  <typedef name="..."
+    ponytypein="... tag"
+    ponytypeinconv=""
+    ponytypeout="..."
+    structtype="..."
+    structdef="..."
+    argtype="... tag"
+    rvtype="..."/>
+
+  <typedef name="NullablePointer[GtkNative]"
+    ponytypein="NullablePointer[GtkNative] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkNative]"
+    structtype="NullablePointer[GtkNative]"
+    structdef="NullablePointer[GtkNative].none()"
+    argtype="NullablePointer[GtkNative] tag"
+    rvtype="NullablePointer[GtkNative]"/>
+
+  <typedef name="NullablePointer[GdkFrameClock]"
+    ponytypein="NullablePointer[GdkFrameClock] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GdkFrameClock]"
+    structtype="NullablePointer[GdkFrameClock]"
+    structdef="NullablePointer[GdkFrameClock].none()"
+    argtype="NullablePointer[GdkFrameClock] tag"
+    rvtype="NullablePointer[GdkFrameClock]"/>
+
+  <typedef name="Array[NullablePointer[GQueue]]"
+    ponytypein="Array[NullablePointer[GQueue]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GQueue]]"
+    structtype="Array[NullablePointer[GQueue]]"
+    structdef="Array[NullablePointer[GQueue]]"
+    argtype="Array[NullablePointer[GQueue]] tag"
+    rvtype="Array[NullablePointer[GQueue]]"/>
+
+  <typedef name="Pointer[U64]"
+    ponytypein="Pointer[U64] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U64]"
+    structtype="Pointer[U64]"
+    structdef="Pointer[U64]"
+    argtype="Pointer[U64] tag"
+    rvtype="Pointer[U64]"/>
+
+  <typedef name="NullablePointer[GtkEventController]"
+    ponytypein="NullablePointer[GtkEventController] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkEventController]"
+    structtype="NullablePointer[GtkEventController]"
+    structdef="NullablePointer[GtkEventController].none()"
+    argtype="NullablePointer[GtkEventController] tag"
+    rvtype="NullablePointer[GtkEventController]"/>
+
+  <typedef name="NullablePointer[GdkClipboard]"
+    ponytypein="NullablePointer[GdkClipboard] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GdkClipboard]"
+    structtype="NullablePointer[GdkClipboard]"
+    structdef="NullablePointer[GdkClipboard].none()"
+    argtype="NullablePointer[GdkClipboard] tag"
+    rvtype="NullablePointer[GdkClipboard]"/>
+
+  <typedef name="Array[NullablePointer[GtkWidget]]"
+    ponytypein="Array[NullablePointer[GtkWidget]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GtkWidget]]"
+    structtype="Array[NullablePointer[GtkWidget]]"
+    structdef="Array[NullablePointer[GtkWidget]]"
+    argtype="Array[NullablePointer[GtkWidget]] tag"
+    rvtype="Array[NullablePointer[GtkWidget]]"/>
+
+  <typedef name="NullablePointer[FUNCTIONTYPE]"
+    ponytypein="NullablePointer[FUNCTIONTYPE] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[FUNCTIONTYPE]"
+    structtype="NullablePointer[FUNCTIONTYPE]"
+    structdef="NullablePointer[FUNCTIONTYPE].none()"
+    argtype="NullablePointer[FUNCTIONTYPE] tag"
+    rvtype="NullablePointer[FUNCTIONTYPE]"/>
+
+  <typedef name="Array[NullablePointer[GListModel]]"
+    ponytypein="Array[NullablePointer[GListModel]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GListModel]]"
+    structtype="Array[NullablePointer[GListModel]]"
+    structdef="Array[NullablePointer[GListModel]]"
+    argtype="Array[NullablePointer[GListModel]] tag"
+    rvtype="Array[NullablePointer[GListModel]]"/>
+
+  <typedef name="NullablePointer[GListModelInterface]"
+    ponytypein="NullablePointer[GListModelInterface] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GListModelInterface]"
+    structtype="NullablePointer[GListModelInterface]"
+    structdef="NullablePointer[GListModelInterface].none()"
+    argtype="NullablePointer[GListModelInterface] tag"
+    rvtype="NullablePointer[GListModelInterface]"/>
+
+  <typedef name="NullablePointer[GObject]"
+    ponytypein="NullablePointer[GObject] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GObject]"
+    structtype="NullablePointer[GObject]"
+    structdef="NullablePointer[GObject].none()"
+    argtype="NullablePointer[GObject] tag"
+    rvtype="NullablePointer[GObject]"/>
+
+  <typedef name="NullablePointer[GSourceFuncs]"
+    ponytypein="NullablePointer[GSourceFuncs] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GSourceFuncs]"
+    structtype="NullablePointer[GSourceFuncs]"
+    structdef="NullablePointer[GSourceFuncs].none()"
+    argtype="NullablePointer[GSourceFuncs] tag"
+    rvtype="NullablePointer[GSourceFuncs]"/>
+
+  <typedef name="Array[NullablePointer[GtkWindowGroup]]"
+    ponytypein="Array[NullablePointer[GtkWindowGroup]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GtkWindowGroup]]"
+    structtype="Array[NullablePointer[GtkWindowGroup]]"
+    structdef="Array[NullablePointer[GtkWindowGroup]]"
+    argtype="Array[NullablePointer[GtkWindowGroup]] tag"
+    rvtype="Array[NullablePointer[GtkWindowGroup]]"/>
+
+  <typedef name="NullablePointer[GCond]"
+    ponytypein="NullablePointer[GCond] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GCond]"
+    structtype="NullablePointer[GCond]"
+    structdef="NullablePointer[GCond].none()"
+    argtype="NullablePointer[GCond] tag"
+    rvtype="NullablePointer[GCond]"/>
+
+  <typedef name="NullablePointer[GSourceCallbackFuncs]"
+    ponytypein="NullablePointer[GSourceCallbackFuncs] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GSourceCallbackFuncs]"
+    structtype="NullablePointer[GSourceCallbackFuncs]"
+    structdef="NullablePointer[GSourceCallbackFuncs].none()"
+    argtype="NullablePointer[GSourceCallbackFuncs] tag"
+    rvtype="NullablePointer[GSourceCallbackFuncs]"/>
+
+  <typedef name="NullablePointer[GtkLayoutManager]"
+    ponytypein="NullablePointer[GtkLayoutManager] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkLayoutManager]"
+    structtype="NullablePointer[GtkLayoutManager]"
+    structdef="NullablePointer[GtkLayoutManager].none()"
+    argtype="NullablePointer[GtkLayoutManager] tag"
+    rvtype="NullablePointer[GtkLayoutManager]"/>
+
+  <typedef name="NullablePointer[GMainContext]"
+    ponytypein="NullablePointer[GMainContext] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GMainContext]"
+    structtype="NullablePointer[GMainContext]"
+    structdef="NullablePointer[GMainContext].none()"
+    argtype="NullablePointer[GMainContext] tag"
+    rvtype="NullablePointer[GMainContext]"/>
+
+  <typedef name="NullablePointer[GTimeVal]"
+    ponytypein="NullablePointer[GTimeVal] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GTimeVal]"
+    structtype="NullablePointer[GTimeVal]"
+    structdef="NullablePointer[GTimeVal].none()"
+    argtype="NullablePointer[GTimeVal] tag"
+    rvtype="NullablePointer[GTimeVal]"/>
+
+  <typedef name="NullablePointer[Graphenerectt]"
+    ponytypein="NullablePointer[Graphenerectt] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Graphenerectt]"
+    structtype="NullablePointer[Graphenerectt]"
+    structdef="NullablePointer[Graphenerectt].none()"
+    argtype="NullablePointer[Graphenerectt] tag"
+    rvtype="NullablePointer[Graphenerectt]"/>
+
+  <typedef name="NullablePointer[GtkSettings]"
+    ponytypein="NullablePointer[GtkSettings] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkSettings]"
+    structtype="NullablePointer[GtkSettings]"
+    structdef="NullablePointer[GtkSettings].none()"
+    argtype="NullablePointer[GtkSettings] tag"
+    rvtype="NullablePointer[GtkSettings]"/>
+
+  <typedef name="NullablePointer[PangoContext]"
+    ponytypein="NullablePointer[PangoContext] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoContext]"
+    structtype="NullablePointer[PangoContext]"
+    structdef="NullablePointer[PangoContext].none()"
+    argtype="NullablePointer[PangoContext] tag"
+    rvtype="NullablePointer[PangoContext]"/>
+
+  <typedef name="NullablePointer[GVariant]"
+    ponytypein="NullablePointer[GVariant] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GVariant]"
+    structtype="NullablePointer[GVariant]"
+    structdef="NullablePointer[GVariant].none()"
+    argtype="NullablePointer[GVariant] tag"
+    rvtype="NullablePointer[GVariant]"/>
+
+  <typedef name="NullablePointer[GMainLoop]"
+    ponytypein="NullablePointer[GMainLoop] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GMainLoop]"
+    structtype="NullablePointer[GMainLoop]"
+    structdef="NullablePointer[GMainLoop].none()"
+    argtype="NullablePointer[GMainLoop] tag"
+    rvtype="NullablePointer[GMainLoop]"/>
+
+  <typedef name="NullablePointer[GdkSnapshot]"
+    ponytypein="NullablePointer[GdkSnapshot] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GdkSnapshot]"
+    structtype="NullablePointer[GdkSnapshot]"
+    structdef="NullablePointer[GdkSnapshot].none()"
+    argtype="NullablePointer[GdkSnapshot] tag"
+    rvtype="NullablePointer[GdkSnapshot]"/>
+
+  <typedef name="NullablePointer[GtkApplication]"
+    ponytypein="NullablePointer[GtkApplication] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkApplication]"
+    structtype="NullablePointer[GtkApplication]"
+    structdef="NullablePointer[GtkApplication].none()"
+    argtype="NullablePointer[GtkApplication] tag"
+    rvtype="NullablePointer[GtkApplication]"/>
+
+  <typedef name="NullablePointer[GtkShortcut]"
+    ponytypein="NullablePointer[GtkShortcut] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkShortcut]"
+    structtype="NullablePointer[GtkShortcut]"
+    structdef="NullablePointer[GtkShortcut].none()"
+    argtype="NullablePointer[GtkShortcut] tag"
+    rvtype="NullablePointer[GtkShortcut]"/>
+
+  <typedef name="F64"
+    ponytypein="F64"
+    ponytypeinconv=""
+    ponytypeout="F64"
+    structtype="F64"
+    structdef="F64(0)"
+    argtype="F64"
+    rvtype="F64"/>
+
+  <typedef name="Pointer[None]"
+    ponytypein="Pointer[None] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[None]"
+    structtype="Pointer[None]"
+    structdef="Pointer[None]"
+    argtype="Pointer[None] tag"
+    rvtype="Pointer[None]"/>
+
+  <typedef name="Array[NullablePointer[GtkWindow]]"
+    ponytypein="Array[NullablePointer[GtkWindow]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GtkWindow]]"
+    structtype="Array[NullablePointer[GtkWindow]]"
+    structdef="Array[NullablePointer[GtkWindow]]"
+    argtype="Array[NullablePointer[GtkWindow]] tag"
+    rvtype="Array[NullablePointer[GtkWindow]]"/>
+
+  <typedef name="Array[NullablePointer[GVariantType]]"
+    ponytypein="Array[NullablePointer[GVariantType]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GVariantType]]"
+    structtype="Array[NullablePointer[GVariantType]]"
+    structdef="Array[NullablePointer[GVariantType]]"
+    argtype="Array[NullablePointer[GVariantType]] tag"
+    rvtype="Array[NullablePointer[GVariantType]]"/>
+
+  <typedef name="I32"
+    ponytypein="I32"
+    ponytypeinconv=""
+    ponytypeout="I32"
+    structtype="I32"
+    structdef="I32(0)"
+    argtype="I32"
+    rvtype="I32"/>
+
+  <typedef name="Pointer[U32]"
+    ponytypein="Pointer[U32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U32]"
+    structtype="Pointer[U32]"
+    structdef="Pointer[U32]"
+    argtype="Pointer[U32] tag"
+    rvtype="Pointer[U32]"/>
+
+  <typedef name="NullablePointer[GBytes]"
+    ponytypein="NullablePointer[GBytes] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GBytes]"
+    structtype="NullablePointer[GBytes]"
+    structdef="NullablePointer[GBytes].none()"
+    argtype="NullablePointer[GBytes] tag"
+    rvtype="NullablePointer[GBytes]"/>
+
+  <typedef name="U64"
+    ponytypein="U64"
+    ponytypeinconv=""
+    ponytypeout="U64"
+    structtype="U64"
+    structdef="U64(0)"
+    argtype="U64"
+    rvtype="U64"/>
+
+  <typedef name="NullablePointer[GdkCursor]"
+    ponytypein="NullablePointer[GdkCursor] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GdkCursor]"
+    structtype="NullablePointer[GdkCursor]"
+    structdef="NullablePointer[GdkCursor].none()"
+    argtype="NullablePointer[GdkCursor] tag"
+    rvtype="NullablePointer[GdkCursor]"/>
+
+  <typedef name="NullablePointer[GActionGroup]"
+    ponytypein="NullablePointer[GActionGroup] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GActionGroup]"
+    structtype="NullablePointer[GActionGroup]"
+    structdef="NullablePointer[GActionGroup].none()"
+    argtype="NullablePointer[GActionGroup] tag"
+    rvtype="NullablePointer[GActionGroup]"/>
+
+  <typedef name="NullablePointer[GtkWindowGroup]"
+    ponytypein="NullablePointer[GtkWindowGroup] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkWindowGroup]"
+    structtype="NullablePointer[GtkWindowGroup]"
+    structdef="NullablePointer[GtkWindowGroup].none()"
+    argtype="NullablePointer[GtkWindowGroup] tag"
+    rvtype="NullablePointer[GtkWindowGroup]"/>
+
+  <typedef name="NullablePointer[GClosure]"
+    ponytypein="NullablePointer[GClosure] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GClosure]"
+    structtype="NullablePointer[GClosure]"
+    structdef="NullablePointer[GClosure].none()"
+    argtype="NullablePointer[GClosure] tag"
+    rvtype="NullablePointer[GClosure]"/>
+
+  <typedef name="NullablePointer[GSignalInvocationHint]"
+    ponytypein="NullablePointer[GSignalInvocationHint] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GSignalInvocationHint]"
+    structtype="NullablePointer[GSignalInvocationHint]"
+    structdef="NullablePointer[GSignalInvocationHint].none()"
+    argtype="NullablePointer[GSignalInvocationHint] tag"
+    rvtype="NullablePointer[GSignalInvocationHint]"/>
+
+  <typedef name="Pointer[I32]"
+    ponytypein="Pointer[I32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[I32]"
+    structtype="Pointer[I32]"
+    structdef="Pointer[I32]"
+    argtype="Pointer[I32] tag"
+    rvtype="Pointer[I32]"/>
+
+  <typedef name="NullablePointer[Graphenematrixt]"
+    ponytypein="NullablePointer[Graphenematrixt] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Graphenematrixt]"
+    structtype="NullablePointer[Graphenematrixt]"
+    structdef="NullablePointer[Graphenematrixt].none()"
+    argtype="NullablePointer[Graphenematrixt] tag"
+    rvtype="NullablePointer[Graphenematrixt]"/>
+
+  <typedef name="Array[NullablePointer[GtkRequisition]]"
+    ponytypein="Array[NullablePointer[GtkRequisition]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GtkRequisition]]"
+    structtype="Array[NullablePointer[GtkRequisition]]"
+    structdef="Array[NullablePointer[GtkRequisition]]"
+    argtype="Array[NullablePointer[GtkRequisition]] tag"
+    rvtype="Array[NullablePointer[GtkRequisition]]"/>
+
+  <typedef name="NullablePointer[GtkButton]"
+    ponytypein="NullablePointer[GtkButton] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkButton]"
+    structtype="NullablePointer[GtkButton]"
+    structdef="NullablePointer[GtkButton].none()"
+    argtype="NullablePointer[GtkButton] tag"
+    rvtype="NullablePointer[GtkButton]"/>
+
+  <typedef name="NullablePointer[PangoFontMap]"
+    ponytypein="NullablePointer[PangoFontMap] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoFontMap]"
+    structtype="NullablePointer[PangoFontMap]"
+    structdef="NullablePointer[PangoFontMap].none()"
+    argtype="NullablePointer[PangoFontMap] tag"
+    rvtype="NullablePointer[PangoFontMap]"/>
+
+  <typedef name="None"
+    ponytypein="None tag"
+    ponytypeinconv=""
+    ponytypeout="None"
+    structtype="None"
+    structdef="None"
+    argtype="None tag"
+    rvtype="None"/>
+
+  <typedef name="Pointer[F64]"
+    ponytypein="Pointer[F64] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[F64]"
+    structtype="Pointer[F64]"
+    structdef="Pointer[F64]"
+    argtype="Pointer[F64] tag"
+    rvtype="Pointer[F64]"/>
+
+  <typedef name="Array[NullablePointer[GList]]"
+    ponytypein="Array[NullablePointer[GList]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GList]]"
+    structtype="Array[NullablePointer[GList]]"
+    structdef="Array[NullablePointer[GList]]"
+    argtype="Array[NullablePointer[GList]] tag"
+    rvtype="Array[NullablePointer[GList]]"/>
+
+  <typedef name="NullablePointer[GtkWidgetClass]"
+    ponytypein="NullablePointer[GtkWidgetClass] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkWidgetClass]"
+    structtype="NullablePointer[GtkWidgetClass]"
+    structdef="NullablePointer[GtkWidgetClass].none()"
+    argtype="NullablePointer[GtkWidgetClass] tag"
+    rvtype="NullablePointer[GtkWidgetClass]"/>
+
+  <typedef name="NullablePointer[GtkRoot]"
+    ponytypein="NullablePointer[GtkRoot] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkRoot]"
+    structtype="NullablePointer[GtkRoot]"
+    structdef="NullablePointer[GtkRoot].none()"
+    argtype="NullablePointer[GtkRoot] tag"
+    rvtype="NullablePointer[GtkRoot]"/>
+
+  <typedef name="NullablePointer[GSource]"
+    ponytypein="NullablePointer[GSource] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GSource]"
+    structtype="NullablePointer[GSource]"
+    structdef="NullablePointer[GSource].none()"
+    argtype="NullablePointer[GSource] tag"
+    rvtype="NullablePointer[GSource]"/>
+
+  <typedef name="NullablePointer[GdkMonitor]"
+    ponytypein="NullablePointer[GdkMonitor] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GdkMonitor]"
+    structtype="NullablePointer[GdkMonitor]"
+    structdef="NullablePointer[GdkMonitor].none()"
+    argtype="NullablePointer[GdkMonitor] tag"
+    rvtype="NullablePointer[GdkMonitor]"/>
+
+  <typedef name="Array[NullablePointer[GSList]]"
+    ponytypein="Array[NullablePointer[GSList]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GSList]]"
+    structtype="Array[NullablePointer[GSList]]"
+    structdef="Array[NullablePointer[GSList]]"
+    argtype="Array[NullablePointer[GSList]] tag"
+    rvtype="Array[NullablePointer[GSList]]"/>
+
+  <typedef name="NullablePointer[PangoLayout]"
+    ponytypein="NullablePointer[PangoLayout] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[PangoLayout]"
+    structtype="NullablePointer[PangoLayout]"
+    structdef="NullablePointer[PangoLayout].none()"
+    argtype="NullablePointer[PangoLayout] tag"
+    rvtype="NullablePointer[PangoLayout]"/>
+
+  <typedef name="NullablePointer[Cairofontoptions]"
+    ponytypein="NullablePointer[Cairofontoptions] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Cairofontoptions]"
+    structtype="NullablePointer[Cairofontoptions]"
+    structdef="NullablePointer[Cairofontoptions].none()"
+    argtype="NullablePointer[Cairofontoptions] tag"
+    rvtype="NullablePointer[Cairofontoptions]"/>
+
+  <typedef name="NullablePointer[GListModel]"
+    ponytypein="NullablePointer[GListModel] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GListModel]"
+    structtype="NullablePointer[GListModel]"
+    structdef="NullablePointer[GListModel].none()"
+    argtype="NullablePointer[GListModel] tag"
+    rvtype="NullablePointer[GListModel]"/>
+</typedefs>
+

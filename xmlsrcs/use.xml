@@ -1,0 +1,4237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./renderuse.xml"/>
+<xi:include href="./usetypes.xml"/>
+<xi:include href="./gtk4.xml"/>
+                    <uses>
+                      <use id="_3474" name="g_signal_newv"
+     ponyname="g_signal_newv"
+     fid="f138"
+     lineno="270"
+     rv="U32">
+     <useargs>
+       <usearg name="signalname" type="String"/>
+       <usearg name="itype" type="U64"/>
+       <usearg name="signalflags" type="I32"/>
+       <usearg name="classclosure" type="NullablePointer[GClosure]"/>
+       <usearg name="accumulator" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="accudata" type="Pointer[None]"/>
+       <usearg name="cmarshaller" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="returntype" type="U64"/>
+       <usearg name="nparams" type="U32"/>
+       <usearg name="paramtypes" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_3475" name="g_signal_new_valist"
+     ponyname="g_signal_new_valist"
+     fid="f138"
+     lineno="281"
+     rv="U32">
+     <useargs>
+       <usearg name="signalname" type="String"/>
+       <usearg name="itype" type="U64"/>
+       <usearg name="signalflags" type="I32"/>
+       <usearg name="classclosure" type="NullablePointer[GClosure]"/>
+       <usearg name="accumulator" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="accudata" type="Pointer[None]"/>
+       <usearg name="cmarshaller" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="returntype" type="U64"/>
+       <usearg name="nparams" type="U32"/>
+       <usearg name="args" type="NullablePointer[Valisttag]"/>
+     </useargs>
+  </use>
+  <use id="_3476" name="g_signal_new"
+     ponyname="g_signal_new"
+     fid="f138"
+     lineno="292"
+     rv="U32">
+     <useargs>
+       <usearg name="signalname" type="String"/>
+       <usearg name="itype" type="U64"/>
+       <usearg name="signalflags" type="I32"/>
+       <usearg name="classoffset" type="U32"/>
+       <usearg name="accumulator" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="accudata" type="Pointer[None]"/>
+       <usearg name="cmarshaller" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="returntype" type="U64"/>
+       <usearg name="nparams" type="U32"/>
+       <usearg name="parg9" type="..."/>
+     </useargs>
+  </use>
+  <use id="_3477" name="g_signal_new_class_handler"
+     ponyname="g_signal_new_class_handler"
+     fid="f138"
+     lineno="303"
+     rv="U32">
+     <useargs>
+       <usearg name="signalname" type="String"/>
+       <usearg name="itype" type="U64"/>
+       <usearg name="signalflags" type="I32"/>
+       <usearg name="classhandler" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="accumulator" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="accudata" type="Pointer[None]"/>
+       <usearg name="cmarshaller" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="returntype" type="U64"/>
+       <usearg name="nparams" type="U32"/>
+       <usearg name="parg9" type="..."/>
+     </useargs>
+  </use>
+  <use id="_3478" name="g_signal_set_va_marshaller"
+     ponyname="g_signal_set_va_marshaller"
+     fid="f138"
+     lineno="314"
+     rv="None">
+     <useargs>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="instancetype" type="U64"/>
+       <usearg name="vamarshaller" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_3479" name="g_signal_emitv"
+     ponyname="g_signal_emitv"
+     fid="f138"
+     lineno="319"
+     rv="None">
+     <useargs>
+       <usearg name="instanceandparams" type="NullablePointer[GValue]"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="returnvalue" type="NullablePointer[GValue]"/>
+     </useargs>
+  </use>
+  <use id="_3480" name="g_signal_emit_valist"
+     ponyname="g_signal_emit_valist"
+     fid="f138"
+     lineno="324"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="varargs" type="NullablePointer[Valisttag]"/>
+     </useargs>
+  </use>
+  <use id="_3481" name="g_signal_emit"
+     ponyname="g_signal_emit"
+     fid="f138"
+     lineno="329"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="parg3" type="..."/>
+     </useargs>
+  </use>
+  <use id="_3482" name="g_signal_emit_by_name"
+     ponyname="g_signal_emit_by_name"
+     fid="f138"
+     lineno="334"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="detailedsignal" type="String"/>
+       <usearg name="parg2" type="..."/>
+     </useargs>
+  </use>
+  <use id="_3483" name="g_signal_lookup"
+     ponyname="g_signal_lookup"
+     fid="f138"
+     lineno="338"
+     rv="U32">
+     <useargs>
+       <usearg name="name" type="String"/>
+       <usearg name="itype" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_3484" name="g_signal_name"
+     ponyname="g_signal_name"
+     fid="f138"
+     lineno="341"
+     rv="String">
+     <useargs>
+       <usearg name="signalid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_3485" name="g_signal_query"
+     ponyname="g_signal_query"
+     fid="f138"
+     lineno="343"
+     rv="None">
+     <useargs>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="query" type="NullablePointer[GSignalQuery]"/>
+     </useargs>
+  </use>
+  <use id="_3486" name="g_signal_list_ids"
+     ponyname="g_signal_list_ids"
+     fid="f138"
+     lineno="346"
+     rv="Pointer[U32]">
+     <useargs>
+       <usearg name="itype" type="U64"/>
+       <usearg name="nids" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_3487" name="g_signal_is_valid_name"
+     ponyname="g_signal_is_valid_name"
+     fid="f138"
+     lineno="349"
+     rv="I32">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_3488" name="g_signal_parse_name"
+     ponyname="g_signal_parse_name"
+     fid="f138"
+     lineno="351"
+     rv="I32">
+     <useargs>
+       <usearg name="detailedsignal" type="String"/>
+       <usearg name="itype" type="U64"/>
+       <usearg name="signalidp" type="Pointer[U32]"/>
+       <usearg name="detailp" type="Pointer[U32]"/>
+       <usearg name="forcedetailquark" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_3489" name="g_signal_get_invocation_hint"
+     ponyname="g_signal_get_invocation_hint"
+     fid="f138"
+     lineno="357"
+     rv="NullablePointer[GSignalInvocationHint]">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3490" name="g_signal_stop_emission"
+     ponyname="g_signal_stop_emission"
+     fid="f138"
+     lineno="362"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_3491" name="g_signal_stop_emission_by_name"
+     ponyname="g_signal_stop_emission_by_name"
+     fid="f138"
+     lineno="366"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="detailedsignal" type="String"/>
+     </useargs>
+  </use>
+  <use id="_3492" name="g_signal_add_emission_hook"
+     ponyname="g_signal_add_emission_hook"
+     fid="f138"
+     lineno="369"
+     rv="U64">
+     <useargs>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="hookfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="hookdata" type="Pointer[None]"/>
+       <usearg name="datadestroy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_3493" name="g_signal_remove_emission_hook"
+     ponyname="g_signal_remove_emission_hook"
+     fid="f138"
+     lineno="375"
+     rv="None">
+     <useargs>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="hookid" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_3494" name="g_signal_has_handler_pending"
+     ponyname="g_signal_has_handler_pending"
+     fid="f138"
+     lineno="381"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="maybeblocked" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_3495" name="g_signal_connect_closure_by_id"
+     ponyname="g_signal_connect_closure_by_id"
+     fid="f138"
+     lineno="386"
+     rv="U64">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="closure" type="NullablePointer[GClosure]"/>
+       <usearg name="after" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_3496" name="g_signal_connect_closure"
+     ponyname="g_signal_connect_closure"
+     fid="f138"
+     lineno="392"
+     rv="U64">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="detailedsignal" type="String"/>
+       <usearg name="closure" type="NullablePointer[GClosure]"/>
+       <usearg name="after" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_3497" name="g_signal_connect_data"
+     ponyname="g_signal_connect_data"
+     fid="f138"
+     lineno="397"
+     rv="U64">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="detailedsignal" type="String"/>
+       <usearg name="chandler" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="destroydata" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="connectflags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_3498" name="g_signal_handler_block"
+     ponyname="g_signal_handler_block"
+     fid="f138"
+     lineno="404"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="handlerid" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_3499" name="g_signal_handler_unblock"
+     ponyname="g_signal_handler_unblock"
+     fid="f138"
+     lineno="407"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="handlerid" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_3500" name="g_signal_handler_disconnect"
+     ponyname="g_signal_handler_disconnect"
+     fid="f138"
+     lineno="410"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="handlerid" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_3501" name="g_signal_handler_is_connected"
+     ponyname="g_signal_handler_is_connected"
+     fid="f138"
+     lineno="413"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="handlerid" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_3502" name="g_signal_handler_find"
+     ponyname="g_signal_handler_find"
+     fid="f138"
+     lineno="416"
+     rv="U64">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="mask" type="I32"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="closure" type="NullablePointer[GClosure]"/>
+       <usearg name="func" type="Pointer[None]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3503" name="g_signal_handlers_block_matched"
+     ponyname="g_signal_handlers_block_matched"
+     fid="f138"
+     lineno="424"
+     rv="U32">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="mask" type="I32"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="closure" type="NullablePointer[GClosure]"/>
+       <usearg name="func" type="Pointer[None]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3504" name="g_signal_handlers_unblock_matched"
+     ponyname="g_signal_handlers_unblock_matched"
+     fid="f138"
+     lineno="432"
+     rv="U32">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="mask" type="I32"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="closure" type="NullablePointer[GClosure]"/>
+       <usearg name="func" type="Pointer[None]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3505" name="g_signal_handlers_disconnect_matched"
+     ponyname="g_signal_handlers_disconnect_matched"
+     fid="f138"
+     lineno="440"
+     rv="U32">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="mask" type="I32"/>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="detail" type="U32"/>
+       <usearg name="closure" type="NullablePointer[GClosure]"/>
+       <usearg name="func" type="Pointer[None]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3506" name="g_clear_signal_handler"
+     ponyname="g_clear_signal_handler"
+     fid="f138"
+     lineno="449"
+     rv="None">
+     <useargs>
+       <usearg name="handleridptr" type="Pointer[U64]"/>
+       <usearg name="instance" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3507" name="g_signal_override_class_closure"
+     ponyname="g_signal_override_class_closure"
+     fid="f138"
+     lineno="468"
+     rv="None">
+     <useargs>
+       <usearg name="signalid" type="U32"/>
+       <usearg name="instancetype" type="U64"/>
+       <usearg name="classclosure" type="NullablePointer[GClosure]"/>
+     </useargs>
+  </use>
+  <use id="_3508" name="g_signal_override_class_handler"
+     ponyname="g_signal_override_class_handler"
+     fid="f138"
+     lineno="472"
+     rv="None">
+     <useargs>
+       <usearg name="signalname" type="String"/>
+       <usearg name="instancetype" type="U64"/>
+       <usearg name="classhandler" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_3509" name="g_signal_chain_from_overridden"
+     ponyname="g_signal_chain_from_overridden"
+     fid="f138"
+     lineno="476"
+     rv="None">
+     <useargs>
+       <usearg name="instanceandparams" type="NullablePointer[GValue]"/>
+       <usearg name="returnvalue" type="NullablePointer[GValue]"/>
+     </useargs>
+  </use>
+  <use id="_3510" name="g_signal_chain_from_overridden_handler"
+     ponyname="g_signal_chain_from_overridden_handler"
+     fid="f138"
+     lineno="479"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+       <usearg name="parg1" type="..."/>
+     </useargs>
+  </use>
+  <use id="_3511" name="g_signal_accumulator_true_handled"
+     ponyname="g_signal_accumulator_true_handled"
+     fid="f138"
+     lineno="615"
+     rv="I32">
+     <useargs>
+       <usearg name="ihint" type="NullablePointer[GSignalInvocationHint]"/>
+       <usearg name="returnaccu" type="NullablePointer[GValue]"/>
+       <usearg name="handlerreturn" type="NullablePointer[GValue]"/>
+       <usearg name="dummy" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3512" name="g_signal_accumulator_first_wins"
+     ponyname="g_signal_accumulator_first_wins"
+     fid="f138"
+     lineno="621"
+     rv="I32">
+     <useargs>
+       <usearg name="ihint" type="NullablePointer[GSignalInvocationHint]"/>
+       <usearg name="returnaccu" type="NullablePointer[GValue]"/>
+       <usearg name="handlerreturn" type="NullablePointer[GValue]"/>
+       <usearg name="dummy" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3513" name="g_signal_handlers_destroy"
+     ponyname="g_signal_handlers_destroy"
+     fid="f138"
+     lineno="628"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3514" name="_g_signals_destroy"
+     ponyname="_g_signals_destroy"
+     fid="f138"
+     lineno="629"
+     rv="None">
+     <useargs>
+       <usearg name="itype" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_16090" name="gtk_widget_get_type"
+     ponyname="gtk_widget_get_type"
+     fid="f452"
+     lineno="267"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_16091" name="gtk_widget_unparent"
+     ponyname="gtk_widget_unparent"
+     fid="f452"
+     lineno="269"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16092" name="gtk_widget_show"
+     ponyname="gtk_widget_show"
+     fid="f452"
+     lineno="271"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16093" name="gtk_widget_hide"
+     ponyname="gtk_widget_hide"
+     fid="f452"
+     lineno="273"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16094" name="gtk_widget_map"
+     ponyname="gtk_widget_map"
+     fid="f452"
+     lineno="275"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16095" name="gtk_widget_unmap"
+     ponyname="gtk_widget_unmap"
+     fid="f452"
+     lineno="277"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16096" name="gtk_widget_realize"
+     ponyname="gtk_widget_realize"
+     fid="f452"
+     lineno="279"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16097" name="gtk_widget_unrealize"
+     ponyname="gtk_widget_unrealize"
+     fid="f452"
+     lineno="281"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16098" name="gtk_widget_queue_draw"
+     ponyname="gtk_widget_queue_draw"
+     fid="f452"
+     lineno="285"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16099" name="gtk_widget_queue_resize"
+     ponyname="gtk_widget_queue_resize"
+     fid="f452"
+     lineno="287"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16100" name="gtk_widget_queue_allocate"
+     ponyname="gtk_widget_queue_allocate"
+     fid="f452"
+     lineno="289"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16101" name="gtk_widget_get_frame_clock"
+     ponyname="gtk_widget_get_frame_clock"
+     fid="f452"
+     lineno="291"
+     rv="NullablePointer[GdkFrameClock]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16102" name="gtk_widget_size_allocate"
+     ponyname="gtk_widget_size_allocate"
+     fid="f452"
+     lineno="294"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="allocation" type="NullablePointer[Cairorectangleint]"/>
+       <usearg name="baseline" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16103" name="gtk_widget_allocate"
+     ponyname="gtk_widget_allocate"
+     fid="f452"
+     lineno="298"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+       <usearg name="baseline" type="I32"/>
+       <usearg name="transform" type="NullablePointer[GskTransform]"/>
+     </useargs>
+  </use>
+  <use id="_16104" name="gtk_widget_get_request_mode"
+     ponyname="gtk_widget_get_request_mode"
+     fid="f452"
+     lineno="305"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16105" name="gtk_widget_measure"
+     ponyname="gtk_widget_measure"
+     fid="f452"
+     lineno="307"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="orientation" type="I32"/>
+       <usearg name="forsize" type="I32"/>
+       <usearg name="minimum" type="Pointer[I32]"/>
+       <usearg name="natural" type="Pointer[I32]"/>
+       <usearg name="minimumbaseline" type="Pointer[I32]"/>
+       <usearg name="naturalbaseline" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_16106" name="gtk_widget_get_preferred_size"
+     ponyname="gtk_widget_get_preferred_size"
+     fid="f452"
+     lineno="315"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="minimumsize" type="NullablePointer[GtkRequisition]"/>
+       <usearg name="naturalsize" type="NullablePointer[GtkRequisition]"/>
+     </useargs>
+  </use>
+  <use id="_16107" name="gtk_widget_set_layout_manager"
+     ponyname="gtk_widget_set_layout_manager"
+     fid="f452"
+     lineno="320"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="layoutmanager" type="NullablePointer[GtkLayoutManager]"/>
+     </useargs>
+  </use>
+  <use id="_16108" name="gtk_widget_get_layout_manager"
+     ponyname="gtk_widget_get_layout_manager"
+     fid="f452"
+     lineno="323"
+     rv="NullablePointer[GtkLayoutManager]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16109" name="gtk_widget_class_set_layout_manager_type"
+     ponyname="gtk_widget_class_set_layout_manager_type"
+     fid="f452"
+     lineno="326"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="ttype" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_16110" name="gtk_widget_class_get_layout_manager_type"
+     ponyname="gtk_widget_class_get_layout_manager_type"
+     fid="f452"
+     lineno="329"
+     rv="U64">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+     </useargs>
+  </use>
+  <use id="_16111" name="gtk_widget_class_add_binding"
+     ponyname="gtk_widget_class_add_binding"
+     fid="f452"
+     lineno="332"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="keyval" type="U32"/>
+       <usearg name="mods" type="I32"/>
+       <usearg name="callback" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="formatstring" type="String"/>
+       <usearg name="parg5" type="..."/>
+     </useargs>
+  </use>
+  <use id="_16112" name="gtk_widget_class_add_binding_signal"
+     ponyname="gtk_widget_class_add_binding_signal"
+     fid="f452"
+     lineno="339"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="keyval" type="U32"/>
+       <usearg name="mods" type="I32"/>
+       <usearg name="signal" type="String"/>
+       <usearg name="formatstring" type="String"/>
+       <usearg name="parg5" type="..."/>
+     </useargs>
+  </use>
+  <use id="_16113" name="gtk_widget_class_add_binding_action"
+     ponyname="gtk_widget_class_add_binding_action"
+     fid="f452"
+     lineno="347"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="keyval" type="U32"/>
+       <usearg name="mods" type="I32"/>
+       <usearg name="actionname" type="String"/>
+       <usearg name="formatstring" type="String"/>
+       <usearg name="parg5" type="..."/>
+     </useargs>
+  </use>
+  <use id="_16114" name="gtk_widget_class_add_shortcut"
+     ponyname="gtk_widget_class_add_shortcut"
+     fid="f452"
+     lineno="355"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="shortcut" type="NullablePointer[GtkShortcut]"/>
+     </useargs>
+  </use>
+  <use id="_16115" name="gtk_widget_class_set_activate_signal"
+     ponyname="gtk_widget_class_set_activate_signal"
+     fid="f452"
+     lineno="359"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="signalid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_16116" name="gtk_widget_class_set_activate_signal_from_name"
+     ponyname="gtk_widget_class_set_activate_signal_from_name"
+     fid="f452"
+     lineno="362"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="signalname" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16117" name="gtk_widget_class_get_activate_signal"
+     ponyname="gtk_widget_class_get_activate_signal"
+     fid="f452"
+     lineno="365"
+     rv="U32">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+     </useargs>
+  </use>
+  <use id="_16118" name="gtk_widget_mnemonic_activate"
+     ponyname="gtk_widget_mnemonic_activate"
+     fid="f452"
+     lineno="368"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="groupcycling" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16119" name="gtk_widget_activate"
+     ponyname="gtk_widget_activate"
+     fid="f452"
+     lineno="371"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16120" name="gtk_widget_set_can_focus"
+     ponyname="gtk_widget_set_can_focus"
+     fid="f452"
+     lineno="374"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="canfocus" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16121" name="gtk_widget_get_can_focus"
+     ponyname="gtk_widget_get_can_focus"
+     fid="f452"
+     lineno="377"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16122" name="gtk_widget_set_focusable"
+     ponyname="gtk_widget_set_focusable"
+     fid="f452"
+     lineno="379"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="focusable" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16123" name="gtk_widget_get_focusable"
+     ponyname="gtk_widget_get_focusable"
+     fid="f452"
+     lineno="382"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16124" name="gtk_widget_has_focus"
+     ponyname="gtk_widget_has_focus"
+     fid="f452"
+     lineno="384"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16125" name="gtk_widget_is_focus"
+     ponyname="gtk_widget_is_focus"
+     fid="f452"
+     lineno="386"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16126" name="gtk_widget_has_visible_focus"
+     ponyname="gtk_widget_has_visible_focus"
+     fid="f452"
+     lineno="388"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16127" name="gtk_widget_grab_focus"
+     ponyname="gtk_widget_grab_focus"
+     fid="f452"
+     lineno="390"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16128" name="gtk_widget_set_focus_on_click"
+     ponyname="gtk_widget_set_focus_on_click"
+     fid="f452"
+     lineno="392"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="focusonclick" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16129" name="gtk_widget_get_focus_on_click"
+     ponyname="gtk_widget_get_focus_on_click"
+     fid="f452"
+     lineno="395"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16130" name="gtk_widget_set_can_target"
+     ponyname="gtk_widget_set_can_target"
+     fid="f452"
+     lineno="398"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="cantarget" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16131" name="gtk_widget_get_can_target"
+     ponyname="gtk_widget_get_can_target"
+     fid="f452"
+     lineno="401"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16132" name="gtk_widget_has_default"
+     ponyname="gtk_widget_has_default"
+     fid="f452"
+     lineno="404"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16133" name="gtk_widget_set_receives_default"
+     ponyname="gtk_widget_set_receives_default"
+     fid="f452"
+     lineno="407"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="receivesdefault" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16134" name="gtk_widget_get_receives_default"
+     ponyname="gtk_widget_get_receives_default"
+     fid="f452"
+     lineno="410"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16135" name="gtk_widget_set_name"
+     ponyname="gtk_widget_set_name"
+     fid="f452"
+     lineno="414"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16136" name="gtk_widget_get_name"
+     ponyname="gtk_widget_get_name"
+     fid="f452"
+     lineno="417"
+     rv="String">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16137" name="gtk_widget_set_state_flags"
+     ponyname="gtk_widget_set_state_flags"
+     fid="f452"
+     lineno="421"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="flags" type="I32"/>
+       <usearg name="clear" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16138" name="gtk_widget_unset_state_flags"
+     ponyname="gtk_widget_unset_state_flags"
+     fid="f452"
+     lineno="425"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16139" name="gtk_widget_get_state_flags"
+     ponyname="gtk_widget_get_state_flags"
+     fid="f452"
+     lineno="428"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16140" name="gtk_widget_set_sensitive"
+     ponyname="gtk_widget_set_sensitive"
+     fid="f452"
+     lineno="431"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="sensitive" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16141" name="gtk_widget_get_sensitive"
+     ponyname="gtk_widget_get_sensitive"
+     fid="f452"
+     lineno="434"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16142" name="gtk_widget_is_sensitive"
+     ponyname="gtk_widget_is_sensitive"
+     fid="f452"
+     lineno="436"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16143" name="gtk_widget_set_visible"
+     ponyname="gtk_widget_set_visible"
+     fid="f452"
+     lineno="439"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="visible" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16144" name="gtk_widget_get_visible"
+     ponyname="gtk_widget_get_visible"
+     fid="f452"
+     lineno="442"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16145" name="gtk_widget_is_visible"
+     ponyname="gtk_widget_is_visible"
+     fid="f452"
+     lineno="444"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16146" name="gtk_widget_is_drawable"
+     ponyname="gtk_widget_is_drawable"
+     fid="f452"
+     lineno="447"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16147" name="gtk_widget_get_realized"
+     ponyname="gtk_widget_get_realized"
+     fid="f452"
+     lineno="449"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16148" name="gtk_widget_get_mapped"
+     ponyname="gtk_widget_get_mapped"
+     fid="f452"
+     lineno="451"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16149" name="gtk_widget_set_parent"
+     ponyname="gtk_widget_set_parent"
+     fid="f452"
+     lineno="454"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="parent" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16150" name="gtk_widget_get_parent"
+     ponyname="gtk_widget_get_parent"
+     fid="f452"
+     lineno="457"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16151" name="gtk_widget_get_root"
+     ponyname="gtk_widget_get_root"
+     fid="f452"
+     lineno="460"
+     rv="NullablePointer[GtkRoot]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16152" name="gtk_widget_get_native"
+     ponyname="gtk_widget_get_native"
+     fid="f452"
+     lineno="463"
+     rv="NullablePointer[GtkNative]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16153" name="gtk_widget_set_child_visible"
+     ponyname="gtk_widget_set_child_visible"
+     fid="f452"
+     lineno="466"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="childvisible" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16154" name="gtk_widget_get_child_visible"
+     ponyname="gtk_widget_get_child_visible"
+     fid="f452"
+     lineno="469"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16155" name="gtk_widget_get_allocated_width"
+     ponyname="gtk_widget_get_allocated_width"
+     fid="f452"
+     lineno="472"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16156" name="gtk_widget_get_allocated_height"
+     ponyname="gtk_widget_get_allocated_height"
+     fid="f452"
+     lineno="474"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16157" name="gtk_widget_get_allocated_baseline"
+     ponyname="gtk_widget_get_allocated_baseline"
+     fid="f452"
+     lineno="476"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16158" name="gtk_widget_get_allocation"
+     ponyname="gtk_widget_get_allocation"
+     fid="f452"
+     lineno="479"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="allocation" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_16159" name="gtk_widget_compute_transform"
+     ponyname="gtk_widget_compute_transform"
+     fid="f452"
+     lineno="482"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="target" type="NullablePointer[GtkWidget]"/>
+       <usearg name="outtransform" type="NullablePointer[Graphenematrixt]"/>
+     </useargs>
+  </use>
+  <use id="_16160" name="gtk_widget_compute_bounds"
+     ponyname="gtk_widget_compute_bounds"
+     fid="f452"
+     lineno="486"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="target" type="NullablePointer[GtkWidget]"/>
+       <usearg name="outbounds" type="NullablePointer[Graphenerectt]"/>
+     </useargs>
+  </use>
+  <use id="_16161" name="gtk_widget_compute_point"
+     ponyname="gtk_widget_compute_point"
+     fid="f452"
+     lineno="490"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="target" type="NullablePointer[GtkWidget]"/>
+       <usearg name="point" type="NullablePointer[Graphenepointt]"/>
+       <usearg name="outpoint" type="NullablePointer[Graphenepointt]"/>
+     </useargs>
+  </use>
+  <use id="_16162" name="gtk_widget_get_width"
+     ponyname="gtk_widget_get_width"
+     fid="f452"
+     lineno="496"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16163" name="gtk_widget_get_height"
+     ponyname="gtk_widget_get_height"
+     fid="f452"
+     lineno="498"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16164" name="gtk_widget_get_size"
+     ponyname="gtk_widget_get_size"
+     fid="f452"
+     lineno="500"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="orientation" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16165" name="gtk_widget_child_focus"
+     ponyname="gtk_widget_child_focus"
+     fid="f452"
+     lineno="504"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="direction" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16166" name="gtk_widget_keynav_failed"
+     ponyname="gtk_widget_keynav_failed"
+     fid="f452"
+     lineno="507"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="direction" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16167" name="gtk_widget_error_bell"
+     ponyname="gtk_widget_error_bell"
+     fid="f452"
+     lineno="510"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16168" name="gtk_widget_set_size_request"
+     ponyname="gtk_widget_set_size_request"
+     fid="f452"
+     lineno="513"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16169" name="gtk_widget_get_size_request"
+     ponyname="gtk_widget_get_size_request"
+     fid="f452"
+     lineno="517"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="width" type="Pointer[I32]"/>
+       <usearg name="height" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_16170" name="gtk_widget_set_opacity"
+     ponyname="gtk_widget_set_opacity"
+     fid="f452"
+     lineno="521"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="opacity" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_16171" name="gtk_widget_get_opacity"
+     ponyname="gtk_widget_get_opacity"
+     fid="f452"
+     lineno="524"
+     rv="F64">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16172" name="gtk_widget_set_overflow"
+     ponyname="gtk_widget_set_overflow"
+     fid="f452"
+     lineno="526"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="overflow" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16173" name="gtk_widget_get_overflow"
+     ponyname="gtk_widget_get_overflow"
+     fid="f452"
+     lineno="529"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16174" name="gtk_widget_get_ancestor"
+     ponyname="gtk_widget_get_ancestor"
+     fid="f452"
+     lineno="532"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="widgettype" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_16175" name="gtk_widget_get_scale_factor"
+     ponyname="gtk_widget_get_scale_factor"
+     fid="f452"
+     lineno="536"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16176" name="gtk_widget_get_display"
+     ponyname="gtk_widget_get_display"
+     fid="f452"
+     lineno="538"
+     rv="NullablePointer[GdkDisplay]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16177" name="gtk_widget_get_settings"
+     ponyname="gtk_widget_get_settings"
+     fid="f452"
+     lineno="540"
+     rv="NullablePointer[GtkSettings]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16178" name="gtk_widget_get_clipboard"
+     ponyname="gtk_widget_get_clipboard"
+     fid="f452"
+     lineno="542"
+     rv="NullablePointer[GdkClipboard]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16179" name="gtk_widget_get_primary_clipboard"
+     ponyname="gtk_widget_get_primary_clipboard"
+     fid="f452"
+     lineno="544"
+     rv="NullablePointer[GdkClipboard]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16180" name="gtk_widget_get_hexpand"
+     ponyname="gtk_widget_get_hexpand"
+     fid="f452"
+     lineno="549"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16181" name="gtk_widget_set_hexpand"
+     ponyname="gtk_widget_set_hexpand"
+     fid="f452"
+     lineno="551"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="expand" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16182" name="gtk_widget_get_hexpand_set"
+     ponyname="gtk_widget_get_hexpand_set"
+     fid="f452"
+     lineno="554"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16183" name="gtk_widget_set_hexpand_set"
+     ponyname="gtk_widget_set_hexpand_set"
+     fid="f452"
+     lineno="556"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="set" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16184" name="gtk_widget_get_vexpand"
+     ponyname="gtk_widget_get_vexpand"
+     fid="f452"
+     lineno="559"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16185" name="gtk_widget_set_vexpand"
+     ponyname="gtk_widget_set_vexpand"
+     fid="f452"
+     lineno="561"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="expand" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16186" name="gtk_widget_get_vexpand_set"
+     ponyname="gtk_widget_get_vexpand_set"
+     fid="f452"
+     lineno="564"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16187" name="gtk_widget_set_vexpand_set"
+     ponyname="gtk_widget_set_vexpand_set"
+     fid="f452"
+     lineno="566"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="set" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16188" name="gtk_widget_compute_expand"
+     ponyname="gtk_widget_compute_expand"
+     fid="f452"
+     lineno="569"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="orientation" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16189" name="gtk_widget_get_halign"
+     ponyname="gtk_widget_get_halign"
+     fid="f452"
+     lineno="574"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16190" name="gtk_widget_set_halign"
+     ponyname="gtk_widget_set_halign"
+     fid="f452"
+     lineno="576"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="align" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16191" name="gtk_widget_get_valign"
+     ponyname="gtk_widget_get_valign"
+     fid="f452"
+     lineno="579"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16192" name="gtk_widget_set_valign"
+     ponyname="gtk_widget_set_valign"
+     fid="f452"
+     lineno="581"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="align" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16193" name="gtk_widget_get_margin_start"
+     ponyname="gtk_widget_get_margin_start"
+     fid="f452"
+     lineno="584"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16194" name="gtk_widget_set_margin_start"
+     ponyname="gtk_widget_set_margin_start"
+     fid="f452"
+     lineno="586"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="margin" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16195" name="gtk_widget_get_margin_end"
+     ponyname="gtk_widget_get_margin_end"
+     fid="f452"
+     lineno="589"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16196" name="gtk_widget_set_margin_end"
+     ponyname="gtk_widget_set_margin_end"
+     fid="f452"
+     lineno="591"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="margin" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16197" name="gtk_widget_get_margin_top"
+     ponyname="gtk_widget_get_margin_top"
+     fid="f452"
+     lineno="594"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16198" name="gtk_widget_set_margin_top"
+     ponyname="gtk_widget_set_margin_top"
+     fid="f452"
+     lineno="596"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="margin" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16199" name="gtk_widget_get_margin_bottom"
+     ponyname="gtk_widget_get_margin_bottom"
+     fid="f452"
+     lineno="599"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16200" name="gtk_widget_set_margin_bottom"
+     ponyname="gtk_widget_set_margin_bottom"
+     fid="f452"
+     lineno="601"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="margin" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16201" name="gtk_widget_is_ancestor"
+     ponyname="gtk_widget_is_ancestor"
+     fid="f452"
+     lineno="605"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="ancestor" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16202" name="gtk_widget_translate_coordinates"
+     ponyname="gtk_widget_translate_coordinates"
+     fid="f452"
+     lineno="609"
+     rv="I32">
+     <useargs>
+       <usearg name="srcwidget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="destwidget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="srcx" type="F64"/>
+       <usearg name="srcy" type="F64"/>
+       <usearg name="destx" type="Pointer[F64]"/>
+       <usearg name="desty" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_16203" name="gtk_widget_contains"
+     ponyname="gtk_widget_contains"
+     fid="f452"
+     lineno="617"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_16204" name="gtk_widget_pick"
+     ponyname="gtk_widget_pick"
+     fid="f452"
+     lineno="621"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16205" name="gtk_widget_add_controller"
+     ponyname="gtk_widget_add_controller"
+     fid="f452"
+     lineno="627"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="controller" type="NullablePointer[GtkEventController]"/>
+     </useargs>
+  </use>
+  <use id="_16206" name="gtk_widget_remove_controller"
+     ponyname="gtk_widget_remove_controller"
+     fid="f452"
+     lineno="630"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="controller" type="NullablePointer[GtkEventController]"/>
+     </useargs>
+  </use>
+  <use id="_16207" name="gtk_widget_create_pango_context"
+     ponyname="gtk_widget_create_pango_context"
+     fid="f452"
+     lineno="634"
+     rv="NullablePointer[PangoContext]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16208" name="gtk_widget_get_pango_context"
+     ponyname="gtk_widget_get_pango_context"
+     fid="f452"
+     lineno="636"
+     rv="NullablePointer[PangoContext]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16209" name="gtk_widget_set_font_options"
+     ponyname="gtk_widget_set_font_options"
+     fid="f452"
+     lineno="638"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_16210" name="gtk_widget_get_font_options"
+     ponyname="gtk_widget_get_font_options"
+     fid="f452"
+     lineno="641"
+     rv="NullablePointer[Cairofontoptions]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16211" name="gtk_widget_create_pango_layout"
+     ponyname="gtk_widget_create_pango_layout"
+     fid="f452"
+     lineno="643"
+     rv="NullablePointer[PangoLayout]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="text" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16212" name="gtk_widget_set_direction"
+     ponyname="gtk_widget_set_direction"
+     fid="f452"
+     lineno="649"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="dir" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16213" name="gtk_widget_get_direction"
+     ponyname="gtk_widget_get_direction"
+     fid="f452"
+     lineno="652"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16214" name="gtk_widget_set_default_direction"
+     ponyname="gtk_widget_set_default_direction"
+     fid="f452"
+     lineno="655"
+     rv="None">
+     <useargs>
+       <usearg name="dir" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16215" name="gtk_widget_get_default_direction"
+     ponyname="gtk_widget_get_default_direction"
+     fid="f452"
+     lineno="657"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_16216" name="gtk_widget_set_cursor"
+     ponyname="gtk_widget_set_cursor"
+     fid="f452"
+     lineno="660"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="cursor" type="NullablePointer[GdkCursor]"/>
+     </useargs>
+  </use>
+  <use id="_16217" name="gtk_widget_set_cursor_from_name"
+     ponyname="gtk_widget_set_cursor_from_name"
+     fid="f452"
+     lineno="663"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16218" name="gtk_widget_get_cursor"
+     ponyname="gtk_widget_get_cursor"
+     fid="f452"
+     lineno="666"
+     rv="NullablePointer[GdkCursor]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16219" name="gtk_widget_list_mnemonic_labels"
+     ponyname="gtk_widget_list_mnemonic_labels"
+     fid="f452"
+     lineno="669"
+     rv="NullablePointer[GList]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16220" name="gtk_widget_add_mnemonic_label"
+     ponyname="gtk_widget_add_mnemonic_label"
+     fid="f452"
+     lineno="671"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="label" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16221" name="gtk_widget_remove_mnemonic_label"
+     ponyname="gtk_widget_remove_mnemonic_label"
+     fid="f452"
+     lineno="674"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="label" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16222" name="gtk_widget_trigger_tooltip_query"
+     ponyname="gtk_widget_trigger_tooltip_query"
+     fid="f452"
+     lineno="678"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16223" name="gtk_widget_set_tooltip_text"
+     ponyname="gtk_widget_set_tooltip_text"
+     fid="f452"
+     lineno="680"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="text" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16224" name="gtk_widget_get_tooltip_text"
+     ponyname="gtk_widget_get_tooltip_text"
+     fid="f452"
+     lineno="683"
+     rv="String">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16225" name="gtk_widget_set_tooltip_markup"
+     ponyname="gtk_widget_set_tooltip_markup"
+     fid="f452"
+     lineno="685"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="markup" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16226" name="gtk_widget_get_tooltip_markup"
+     ponyname="gtk_widget_get_tooltip_markup"
+     fid="f452"
+     lineno="688"
+     rv="String">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16227" name="gtk_widget_set_has_tooltip"
+     ponyname="gtk_widget_set_has_tooltip"
+     fid="f452"
+     lineno="690"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="hastooltip" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16228" name="gtk_widget_get_has_tooltip"
+     ponyname="gtk_widget_get_has_tooltip"
+     fid="f452"
+     lineno="693"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16229" name="gtk_requisition_get_type"
+     ponyname="gtk_requisition_get_type"
+     fid="f452"
+     lineno="696"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_16230" name="gtk_requisition_new"
+     ponyname="gtk_requisition_new"
+     fid="f452"
+     lineno="698"
+     rv="NullablePointer[GtkRequisition]">
+     <useargs/>
+  </use>
+  <use id="_16231" name="gtk_requisition_copy"
+     ponyname="gtk_requisition_copy"
+     fid="f452"
+     lineno="700"
+     rv="NullablePointer[GtkRequisition]">
+     <useargs>
+       <usearg name="requisition" type="NullablePointer[GtkRequisition]"/>
+     </useargs>
+  </use>
+  <use id="_16232" name="gtk_requisition_free"
+     ponyname="gtk_requisition_free"
+     fid="f452"
+     lineno="702"
+     rv="None">
+     <useargs>
+       <usearg name="requisition" type="NullablePointer[GtkRequisition]"/>
+     </useargs>
+  </use>
+  <use id="_16233" name="gtk_widget_in_destruction"
+     ponyname="gtk_widget_in_destruction"
+     fid="f452"
+     lineno="705"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16234" name="gtk_widget_get_style_context"
+     ponyname="gtk_widget_get_style_context"
+     fid="f452"
+     lineno="708"
+     rv="NullablePointer[GtkStyleContext]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16235" name="gtk_widget_class_set_css_name"
+     ponyname="gtk_widget_class_set_css_name"
+     fid="f452"
+     lineno="711"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16236" name="gtk_widget_class_get_css_name"
+     ponyname="gtk_widget_class_get_css_name"
+     fid="f452"
+     lineno="714"
+     rv="String">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+     </useargs>
+  </use>
+  <use id="_16237" name="gtk_widget_add_tick_callback"
+     ponyname="gtk_widget_add_tick_callback"
+     fid="f452"
+     lineno="717"
+     rv="U32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="callback" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="notify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_16238" name="gtk_widget_remove_tick_callback"
+     ponyname="gtk_widget_remove_tick_callback"
+     fid="f452"
+     lineno="723"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="id" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_16239" name="gtk_widget_init_template"
+     ponyname="gtk_widget_init_template"
+     fid="f452"
+     lineno="829"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16240" name="gtk_widget_get_template_child"
+     ponyname="gtk_widget_get_template_child"
+     fid="f452"
+     lineno="831"
+     rv="NullablePointer[GObject]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="widgettype" type="U64"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16241" name="gtk_widget_class_set_template"
+     ponyname="gtk_widget_class_set_template"
+     fid="f452"
+     lineno="835"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="templatebytes" type="NullablePointer[GBytes]"/>
+     </useargs>
+  </use>
+  <use id="_16242" name="gtk_widget_class_set_template_from_resource"
+     ponyname="gtk_widget_class_set_template_from_resource"
+     fid="f452"
+     lineno="838"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="resourcename" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16243" name="gtk_widget_class_bind_template_callback_full"
+     ponyname="gtk_widget_class_bind_template_callback_full"
+     fid="f452"
+     lineno="841"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="callbackname" type="String"/>
+       <usearg name="callbacksymbol" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_16244" name="gtk_widget_class_set_template_scope"
+     ponyname="gtk_widget_class_set_template_scope"
+     fid="f452"
+     lineno="845"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="scope" type="NullablePointer[GtkBuilderScope]"/>
+     </useargs>
+  </use>
+  <use id="_16245" name="gtk_widget_class_bind_template_child_full"
+     ponyname="gtk_widget_class_bind_template_child_full"
+     fid="f452"
+     lineno="848"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="name" type="String"/>
+       <usearg name="internalchild" type="I32"/>
+       <usearg name="structoffset" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_16246" name="gtk_widget_insert_action_group"
+     ponyname="gtk_widget_insert_action_group"
+     fid="f452"
+     lineno="854"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="name" type="String"/>
+       <usearg name="group" type="NullablePointer[GActionGroup]"/>
+     </useargs>
+  </use>
+  <use id="_16247" name="gtk_widget_activate_action"
+     ponyname="gtk_widget_activate_action"
+     fid="f452"
+     lineno="859"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="name" type="String"/>
+       <usearg name="formatstring" type="String"/>
+       <usearg name="parg3" type="..."/>
+     </useargs>
+  </use>
+  <use id="_16248" name="gtk_widget_activate_action_variant"
+     ponyname="gtk_widget_activate_action_variant"
+     fid="f452"
+     lineno="864"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="name" type="String"/>
+       <usearg name="args" type="NullablePointer[GVariant]"/>
+     </useargs>
+  </use>
+  <use id="_16249" name="gtk_widget_activate_default"
+     ponyname="gtk_widget_activate_default"
+     fid="f452"
+     lineno="869"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16250" name="gtk_widget_set_font_map"
+     ponyname="gtk_widget_set_font_map"
+     fid="f452"
+     lineno="872"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="fontmap" type="NullablePointer[PangoFontMap]"/>
+     </useargs>
+  </use>
+  <use id="_16251" name="gtk_widget_get_font_map"
+     ponyname="gtk_widget_get_font_map"
+     fid="f452"
+     lineno="875"
+     rv="NullablePointer[PangoFontMap]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16252" name="gtk_widget_get_first_child"
+     ponyname="gtk_widget_get_first_child"
+     fid="f452"
+     lineno="878"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16253" name="gtk_widget_get_last_child"
+     ponyname="gtk_widget_get_last_child"
+     fid="f452"
+     lineno="880"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16254" name="gtk_widget_get_next_sibling"
+     ponyname="gtk_widget_get_next_sibling"
+     fid="f452"
+     lineno="882"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16255" name="gtk_widget_get_prev_sibling"
+     ponyname="gtk_widget_get_prev_sibling"
+     fid="f452"
+     lineno="884"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16256" name="gtk_widget_observe_children"
+     ponyname="gtk_widget_observe_children"
+     fid="f452"
+     lineno="886"
+     rv="NullablePointer[GListModel]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16257" name="gtk_widget_observe_controllers"
+     ponyname="gtk_widget_observe_controllers"
+     fid="f452"
+     lineno="888"
+     rv="NullablePointer[GListModel]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16258" name="gtk_widget_insert_after"
+     ponyname="gtk_widget_insert_after"
+     fid="f452"
+     lineno="890"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="parent" type="NullablePointer[GtkWidget]"/>
+       <usearg name="previoussibling" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16259" name="gtk_widget_insert_before"
+     ponyname="gtk_widget_insert_before"
+     fid="f452"
+     lineno="894"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="parent" type="NullablePointer[GtkWidget]"/>
+       <usearg name="nextsibling" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16260" name="gtk_widget_set_focus_child"
+     ponyname="gtk_widget_set_focus_child"
+     fid="f452"
+     lineno="898"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="child" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16261" name="gtk_widget_get_focus_child"
+     ponyname="gtk_widget_get_focus_child"
+     fid="f452"
+     lineno="901"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16262" name="gtk_widget_snapshot_child"
+     ponyname="gtk_widget_snapshot_child"
+     fid="f452"
+     lineno="904"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="child" type="NullablePointer[GtkWidget]"/>
+       <usearg name="snapshot" type="NullablePointer[GdkSnapshot]"/>
+     </useargs>
+  </use>
+  <use id="_16263" name="gtk_widget_should_layout"
+     ponyname="gtk_widget_should_layout"
+     fid="f452"
+     lineno="908"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16264" name="gtk_widget_get_css_name"
+     ponyname="gtk_widget_get_css_name"
+     fid="f452"
+     lineno="910"
+     rv="String">
+     <useargs>
+       <usearg name="self" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16265" name="gtk_widget_add_css_class"
+     ponyname="gtk_widget_add_css_class"
+     fid="f452"
+     lineno="912"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="cssclass" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16266" name="gtk_widget_remove_css_class"
+     ponyname="gtk_widget_remove_css_class"
+     fid="f452"
+     lineno="915"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="cssclass" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16267" name="gtk_widget_has_css_class"
+     ponyname="gtk_widget_has_css_class"
+     fid="f452"
+     lineno="918"
+     rv="I32">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="cssclass" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16268" name="gtk_widget_get_css_classes"
+     ponyname="gtk_widget_get_css_classes"
+     fid="f452"
+     lineno="921"
+     rv="Array[String]">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16269" name="gtk_widget_set_css_classes"
+     ponyname="gtk_widget_set_css_classes"
+     fid="f452"
+     lineno="923"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="classes" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_16271" name="gtk_widget_class_install_action"
+     ponyname="gtk_widget_class_install_action"
+     fid="f452"
+     lineno="945"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="actionname" type="String"/>
+       <usearg name="parametertype" type="String"/>
+       <usearg name="activate" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_16272" name="gtk_widget_class_install_property_action"
+     ponyname="gtk_widget_class_install_property_action"
+     fid="f452"
+     lineno="951"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="actionname" type="String"/>
+       <usearg name="propertyname" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16273" name="gtk_widget_class_query_action"
+     ponyname="gtk_widget_class_query_action"
+     fid="f452"
+     lineno="956"
+     rv="I32">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="index" type="U32"/>
+       <usearg name="owner" type="Pointer[U64]"/>
+       <usearg name="actionname" type="Array[String]"/>
+       <usearg name="parametertype" type="Array[NullablePointer[GVariantType]]"/>
+       <usearg name="propertyname" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_16274" name="gtk_widget_action_set_enabled"
+     ponyname="gtk_widget_action_set_enabled"
+     fid="f452"
+     lineno="964"
+     rv="None">
+     <useargs>
+       <usearg name="widget" type="NullablePointer[GtkWidget]"/>
+       <usearg name="actionname" type="String"/>
+       <usearg name="enabled" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16275" name="gtk_widget_class_set_accessible_role"
+     ponyname="gtk_widget_class_set_accessible_role"
+     fid="f452"
+     lineno="970"
+     rv="None">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+       <usearg name="accessiblerole" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16276" name="gtk_widget_class_get_accessible_role"
+     ponyname="gtk_widget_class_get_accessible_role"
+     fid="f452"
+     lineno="973"
+     rv="I32">
+     <useargs>
+       <usearg name="widgetclass" type="NullablePointer[GtkWidgetClass]"/>
+     </useargs>
+  </use>
+  <use id="_16281" name="glib_autoptr_clear_GtkWidget"
+     ponyname="glib_autoptr_clear_GtkWidget"
+     fid="f452"
+     lineno="975"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16282" name="glib_autoptr_cleanup_GtkWidget"
+     ponyname="glib_autoptr_cleanup_GtkWidget"
+     fid="f452"
+     lineno="975"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="Array[NullablePointer[GtkWidget]]"/>
+     </useargs>
+  </use>
+  <use id="_16283" name="glib_listautoptr_cleanup_GtkWidget"
+     ponyname="glib_listautoptr_cleanup_GtkWidget"
+     fid="f452"
+     lineno="975"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GList]]"/>
+     </useargs>
+  </use>
+  <use id="_16284" name="glib_slistautoptr_cleanup_GtkWidget"
+     ponyname="glib_slistautoptr_cleanup_GtkWidget"
+     fid="f452"
+     lineno="975"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GSList]]"/>
+     </useargs>
+  </use>
+  <use id="_16285" name="glib_queueautoptr_cleanup_GtkWidget"
+     ponyname="glib_queueautoptr_cleanup_GtkWidget"
+     fid="f452"
+     lineno="975"
+     rv="None">
+     <useargs>
+       <usearg name="q" type="Array[NullablePointer[GQueue]]"/>
+     </useargs>
+  </use>
+  <use id="_16290" name="glib_autoptr_clear_GtkRequisition"
+     ponyname="glib_autoptr_clear_GtkRequisition"
+     fid="f452"
+     lineno="976"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="NullablePointer[GtkRequisition]"/>
+     </useargs>
+  </use>
+  <use id="_16291" name="glib_autoptr_cleanup_GtkRequisition"
+     ponyname="glib_autoptr_cleanup_GtkRequisition"
+     fid="f452"
+     lineno="976"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="Array[NullablePointer[GtkRequisition]]"/>
+     </useargs>
+  </use>
+  <use id="_16292" name="glib_listautoptr_cleanup_GtkRequisition"
+     ponyname="glib_listautoptr_cleanup_GtkRequisition"
+     fid="f452"
+     lineno="976"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GList]]"/>
+     </useargs>
+  </use>
+  <use id="_16293" name="glib_slistautoptr_cleanup_GtkRequisition"
+     ponyname="glib_slistautoptr_cleanup_GtkRequisition"
+     fid="f452"
+     lineno="976"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GSList]]"/>
+     </useargs>
+  </use>
+  <use id="_16294" name="glib_queueautoptr_cleanup_GtkRequisition"
+     ponyname="glib_queueautoptr_cleanup_GtkRequisition"
+     fid="f452"
+     lineno="976"
+     rv="None">
+     <useargs>
+       <usearg name="q" type="Array[NullablePointer[GQueue]]"/>
+     </useargs>
+  </use>
+  <use id="_19788" name="gtk_init"
+     ponyname="gtk_init"
+     fid="f603"
+     lineno="57"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_19789" name="gtk_init_check"
+     ponyname="gtk_init_check"
+     fid="f603"
+     lineno="60"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_19790" name="gtk_is_initialized"
+     ponyname="gtk_is_initialized"
+     fid="f603"
+     lineno="63"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_19791" name="gtk_disable_setlocale"
+     ponyname="gtk_disable_setlocale"
+     fid="f603"
+     lineno="85"
+     rv="None">
+     <useargs/>
+  </use>
+  <use id="_19792" name="gtk_get_default_language"
+     ponyname="gtk_get_default_language"
+     fid="f603"
+     lineno="87"
+     rv="NullablePointer[PangoLanguage]">
+     <useargs/>
+  </use>
+  <use id="_19793" name="gtk_get_locale_direction"
+     ponyname="gtk_get_locale_direction"
+     fid="f603"
+     lineno="89"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_5820" name="g_list_model_get_type"
+     ponyname="g_list_model_get_type"
+     fid="f266"
+     lineno="36"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_5829" name="glib_autoptr_clear_GListModel"
+     ponyname="glib_autoptr_clear_GListModel"
+     fid="f266"
+     lineno="36"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="NullablePointer[GListModel]"/>
+     </useargs>
+  </use>
+  <use id="_5830" name="glib_autoptr_cleanup_GListModel"
+     ponyname="glib_autoptr_cleanup_GListModel"
+     fid="f266"
+     lineno="36"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="Array[NullablePointer[GListModel]]"/>
+     </useargs>
+  </use>
+  <use id="_5831" name="glib_listautoptr_cleanup_GListModel"
+     ponyname="glib_listautoptr_cleanup_GListModel"
+     fid="f266"
+     lineno="36"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GList]]"/>
+     </useargs>
+  </use>
+  <use id="_5832" name="glib_slistautoptr_cleanup_GListModel"
+     ponyname="glib_slistautoptr_cleanup_GListModel"
+     fid="f266"
+     lineno="36"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GSList]]"/>
+     </useargs>
+  </use>
+  <use id="_5833" name="glib_queueautoptr_cleanup_GListModel"
+     ponyname="glib_queueautoptr_cleanup_GListModel"
+     fid="f266"
+     lineno="36"
+     rv="None">
+     <useargs>
+       <usearg name="q" type="Array[NullablePointer[GQueue]]"/>
+     </useargs>
+  </use>
+  <use id="_5834" name="G_LIST_MODEL"
+     ponyname="G_LIST_MODEL"
+     fid="f266"
+     lineno="36"
+     rv="NullablePointer[GListModel]">
+     <useargs>
+       <usearg name="ptr" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_5835" name="G_IS_LIST_MODEL"
+     ponyname="G_IS_LIST_MODEL"
+     fid="f266"
+     lineno="36"
+     rv="I32">
+     <useargs>
+       <usearg name="ptr" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_5836" name="G_LIST_MODEL_GET_IFACE"
+     ponyname="G_LIST_MODEL_GET_IFACE"
+     fid="f266"
+     lineno="36"
+     rv="NullablePointer[GListModelInterface]">
+     <useargs>
+       <usearg name="ptr" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_5837" name="g_list_model_get_item_type"
+     ponyname="g_list_model_get_item_type"
+     fid="f266"
+     lineno="51"
+     rv="U64">
+     <useargs>
+       <usearg name="list" type="NullablePointer[GListModel]"/>
+     </useargs>
+  </use>
+  <use id="_5838" name="g_list_model_get_n_items"
+     ponyname="g_list_model_get_n_items"
+     fid="f266"
+     lineno="54"
+     rv="U32">
+     <useargs>
+       <usearg name="list" type="NullablePointer[GListModel]"/>
+     </useargs>
+  </use>
+  <use id="_5839" name="g_list_model_get_item"
+     ponyname="g_list_model_get_item"
+     fid="f266"
+     lineno="57"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="list" type="NullablePointer[GListModel]"/>
+       <usearg name="position" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_5840" name="g_list_model_get_object"
+     ponyname="g_list_model_get_object"
+     fid="f266"
+     lineno="61"
+     rv="NullablePointer[GObject]">
+     <useargs>
+       <usearg name="list" type="NullablePointer[GListModel]"/>
+       <usearg name="position" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_5841" name="g_list_model_items_changed"
+     ponyname="g_list_model_items_changed"
+     fid="f266"
+     lineno="65"
+     rv="None">
+     <useargs>
+       <usearg name="list" type="NullablePointer[GListModel]"/>
+       <usearg name="position" type="U32"/>
+       <usearg name="removed" type="U32"/>
+       <usearg name="added" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1288" name="g_main_context_new"
+     ponyname="g_main_context_new"
+     fid="f82"
+     lineno="356"
+     rv="NullablePointer[GMainContext]">
+     <useargs/>
+  </use>
+  <use id="_1289" name="g_main_context_ref"
+     ponyname="g_main_context_ref"
+     fid="f82"
+     lineno="358"
+     rv="NullablePointer[GMainContext]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1290" name="g_main_context_unref"
+     ponyname="g_main_context_unref"
+     fid="f82"
+     lineno="360"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1291" name="g_main_context_default"
+     ponyname="g_main_context_default"
+     fid="f82"
+     lineno="362"
+     rv="NullablePointer[GMainContext]">
+     <useargs/>
+  </use>
+  <use id="_1292" name="g_main_context_iteration"
+     ponyname="g_main_context_iteration"
+     fid="f82"
+     lineno="365"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="mayblock" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1293" name="g_main_context_pending"
+     ponyname="g_main_context_pending"
+     fid="f82"
+     lineno="368"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1294" name="g_main_context_find_source_by_id"
+     ponyname="g_main_context_find_source_by_id"
+     fid="f82"
+     lineno="373"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="sourceid" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1295" name="g_main_context_find_source_by_user_data"
+     ponyname="g_main_context_find_source_by_user_data"
+     fid="f82"
+     lineno="376"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1296" name="g_main_context_find_source_by_funcs_user_data"
+     ponyname="g_main_context_find_source_by_funcs_user_data"
+     fid="f82"
+     lineno="379"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="funcs" type="NullablePointer[GSourceFuncs]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1297" name="g_main_context_wakeup"
+     ponyname="g_main_context_wakeup"
+     fid="f82"
+     lineno="386"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1298" name="g_main_context_acquire"
+     ponyname="g_main_context_acquire"
+     fid="f82"
+     lineno="388"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1299" name="g_main_context_release"
+     ponyname="g_main_context_release"
+     fid="f82"
+     lineno="390"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1300" name="g_main_context_is_owner"
+     ponyname="g_main_context_is_owner"
+     fid="f82"
+     lineno="392"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1301" name="g_main_context_wait"
+     ponyname="g_main_context_wait"
+     fid="f82"
+     lineno="394"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="cond" type="NullablePointer[GCond]"/>
+       <usearg name="mutex" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1302" name="g_main_context_prepare"
+     ponyname="g_main_context_prepare"
+     fid="f82"
+     lineno="399"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="priority" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_1303" name="g_main_context_query"
+     ponyname="g_main_context_query"
+     fid="f82"
+     lineno="402"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="maxpriority" type="I32"/>
+       <usearg name="timeout" type="Pointer[I32]"/>
+       <usearg name="fds" type="NullablePointer[GPollFD]"/>
+       <usearg name="nfds" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1304" name="g_main_context_check"
+     ponyname="g_main_context_check"
+     fid="f82"
+     lineno="408"
+     rv="I32">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="maxpriority" type="I32"/>
+       <usearg name="fds" type="NullablePointer[GPollFD]"/>
+       <usearg name="nfds" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1305" name="g_main_context_dispatch"
+     ponyname="g_main_context_dispatch"
+     fid="f82"
+     lineno="413"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1306" name="g_main_context_set_poll_func"
+     ponyname="g_main_context_set_poll_func"
+     fid="f82"
+     lineno="416"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1307" name="g_main_context_get_poll_func"
+     ponyname="g_main_context_get_poll_func"
+     fid="f82"
+     lineno="419"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1308" name="g_main_context_add_poll"
+     ponyname="g_main_context_add_poll"
+     fid="f82"
+     lineno="424"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="fd" type="NullablePointer[GPollFD]"/>
+       <usearg name="priority" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1309" name="g_main_context_remove_poll"
+     ponyname="g_main_context_remove_poll"
+     fid="f82"
+     lineno="428"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="fd" type="NullablePointer[GPollFD]"/>
+     </useargs>
+  </use>
+  <use id="_1310" name="g_main_depth"
+     ponyname="g_main_depth"
+     fid="f82"
+     lineno="432"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_1311" name="g_main_current_source"
+     ponyname="g_main_current_source"
+     fid="f82"
+     lineno="434"
+     rv="NullablePointer[GSource]">
+     <useargs/>
+  </use>
+  <use id="_1312" name="g_main_context_push_thread_default"
+     ponyname="g_main_context_push_thread_default"
+     fid="f82"
+     lineno="439"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1313" name="g_main_context_pop_thread_default"
+     ponyname="g_main_context_pop_thread_default"
+     fid="f82"
+     lineno="441"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1314" name="g_main_context_get_thread_default"
+     ponyname="g_main_context_get_thread_default"
+     fid="f82"
+     lineno="443"
+     rv="NullablePointer[GMainContext]">
+     <useargs/>
+  </use>
+  <use id="_1315" name="g_main_context_ref_thread_default"
+     ponyname="g_main_context_ref_thread_default"
+     fid="f82"
+     lineno="445"
+     rv="NullablePointer[GMainContext]">
+     <useargs/>
+  </use>
+  <use id="_1317" name="g_main_context_pusher_new"
+     ponyname="g_main_context_pusher_new"
+     fid="f82"
+     lineno="504"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="maincontext" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1318" name="g_main_context_pusher_free"
+     ponyname="g_main_context_pusher_free"
+     fid="f82"
+     lineno="526"
+     rv="None">
+     <useargs>
+       <usearg name="pusher" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1319" name="g_main_loop_new"
+     ponyname="g_main_loop_new"
+     fid="f82"
+     lineno="535"
+     rv="NullablePointer[GMainLoop]">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="isrunning" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1320" name="g_main_loop_run"
+     ponyname="g_main_loop_run"
+     fid="f82"
+     lineno="538"
+     rv="None">
+     <useargs>
+       <usearg name="loop" type="NullablePointer[GMainLoop]"/>
+     </useargs>
+  </use>
+  <use id="_1321" name="g_main_loop_quit"
+     ponyname="g_main_loop_quit"
+     fid="f82"
+     lineno="540"
+     rv="None">
+     <useargs>
+       <usearg name="loop" type="NullablePointer[GMainLoop]"/>
+     </useargs>
+  </use>
+  <use id="_1322" name="g_main_loop_ref"
+     ponyname="g_main_loop_ref"
+     fid="f82"
+     lineno="542"
+     rv="NullablePointer[GMainLoop]">
+     <useargs>
+       <usearg name="loop" type="NullablePointer[GMainLoop]"/>
+     </useargs>
+  </use>
+  <use id="_1323" name="g_main_loop_unref"
+     ponyname="g_main_loop_unref"
+     fid="f82"
+     lineno="544"
+     rv="None">
+     <useargs>
+       <usearg name="loop" type="NullablePointer[GMainLoop]"/>
+     </useargs>
+  </use>
+  <use id="_1324" name="g_main_loop_is_running"
+     ponyname="g_main_loop_is_running"
+     fid="f82"
+     lineno="546"
+     rv="I32">
+     <useargs>
+       <usearg name="loop" type="NullablePointer[GMainLoop]"/>
+     </useargs>
+  </use>
+  <use id="_1325" name="g_main_loop_get_context"
+     ponyname="g_main_loop_get_context"
+     fid="f82"
+     lineno="548"
+     rv="NullablePointer[GMainContext]">
+     <useargs>
+       <usearg name="loop" type="NullablePointer[GMainLoop]"/>
+     </useargs>
+  </use>
+  <use id="_1326" name="g_source_new"
+     ponyname="g_source_new"
+     fid="f82"
+     lineno="553"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="sourcefuncs" type="NullablePointer[GSourceFuncs]"/>
+       <usearg name="structsize" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1327" name="g_source_set_dispose_function"
+     ponyname="g_source_set_dispose_function"
+     fid="f82"
+     lineno="558"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="dispose" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1328" name="g_source_ref"
+     ponyname="g_source_ref"
+     fid="f82"
+     lineno="563"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1329" name="g_source_unref"
+     ponyname="g_source_unref"
+     fid="f82"
+     lineno="565"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1330" name="g_source_attach"
+     ponyname="g_source_attach"
+     fid="f82"
+     lineno="568"
+     rv="U32">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+     </useargs>
+  </use>
+  <use id="_1331" name="g_source_destroy"
+     ponyname="g_source_destroy"
+     fid="f82"
+     lineno="571"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1332" name="g_source_set_priority"
+     ponyname="g_source_set_priority"
+     fid="f82"
+     lineno="574"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="priority" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1333" name="g_source_get_priority"
+     ponyname="g_source_get_priority"
+     fid="f82"
+     lineno="577"
+     rv="I32">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1334" name="g_source_set_can_recurse"
+     ponyname="g_source_set_can_recurse"
+     fid="f82"
+     lineno="579"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="canrecurse" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1335" name="g_source_get_can_recurse"
+     ponyname="g_source_get_can_recurse"
+     fid="f82"
+     lineno="582"
+     rv="I32">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1336" name="g_source_get_id"
+     ponyname="g_source_get_id"
+     fid="f82"
+     lineno="584"
+     rv="U32">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1337" name="g_source_get_context"
+     ponyname="g_source_get_context"
+     fid="f82"
+     lineno="587"
+     rv="NullablePointer[GMainContext]">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1338" name="g_source_set_callback"
+     ponyname="g_source_set_callback"
+     fid="f82"
+     lineno="590"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="notify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1339" name="g_source_set_funcs"
+     ponyname="g_source_set_funcs"
+     fid="f82"
+     lineno="596"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="funcs" type="NullablePointer[GSourceFuncs]"/>
+     </useargs>
+  </use>
+  <use id="_1340" name="g_source_is_destroyed"
+     ponyname="g_source_is_destroyed"
+     fid="f82"
+     lineno="599"
+     rv="I32">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1341" name="g_source_set_name"
+     ponyname="g_source_set_name"
+     fid="f82"
+     lineno="602"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_1342" name="g_source_get_name"
+     ponyname="g_source_get_name"
+     fid="f82"
+     lineno="605"
+     rv="String">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1343" name="g_source_set_name_by_id"
+     ponyname="g_source_set_name_by_id"
+     fid="f82"
+     lineno="607"
+     rv="None">
+     <useargs>
+       <usearg name="tag" type="U32"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_1344" name="g_source_set_ready_time"
+     ponyname="g_source_set_ready_time"
+     fid="f82"
+     lineno="611"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="readytime" type="I64"/>
+     </useargs>
+  </use>
+  <use id="_1345" name="g_source_get_ready_time"
+     ponyname="g_source_get_ready_time"
+     fid="f82"
+     lineno="614"
+     rv="I64">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1346" name="g_source_add_unix_fd"
+     ponyname="g_source_add_unix_fd"
+     fid="f82"
+     lineno="618"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="events" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1347" name="g_source_modify_unix_fd"
+     ponyname="g_source_modify_unix_fd"
+     fid="f82"
+     lineno="622"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="tag" type="Pointer[None]"/>
+       <usearg name="newevents" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1348" name="g_source_remove_unix_fd"
+     ponyname="g_source_remove_unix_fd"
+     fid="f82"
+     lineno="626"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="tag" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1349" name="g_source_query_unix_fd"
+     ponyname="g_source_query_unix_fd"
+     fid="f82"
+     lineno="629"
+     rv="I32">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="tag" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1350" name="g_source_set_callback_indirect"
+     ponyname="g_source_set_callback_indirect"
+     fid="f82"
+     lineno="635"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="callbackdata" type="Pointer[None]"/>
+       <usearg name="callbackfuncs" type="NullablePointer[GSourceCallbackFuncs]"/>
+     </useargs>
+  </use>
+  <use id="_1351" name="g_source_add_poll"
+     ponyname="g_source_add_poll"
+     fid="f82"
+     lineno="640"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="fd" type="NullablePointer[GPollFD]"/>
+     </useargs>
+  </use>
+  <use id="_1352" name="g_source_remove_poll"
+     ponyname="g_source_remove_poll"
+     fid="f82"
+     lineno="643"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="fd" type="NullablePointer[GPollFD]"/>
+     </useargs>
+  </use>
+  <use id="_1353" name="g_source_add_child_source"
+     ponyname="g_source_add_child_source"
+     fid="f82"
+     lineno="647"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="childsource" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1354" name="g_source_remove_child_source"
+     ponyname="g_source_remove_child_source"
+     fid="f82"
+     lineno="650"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="childsource" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1355" name="g_source_get_current_time"
+     ponyname="g_source_get_current_time"
+     fid="f82"
+     lineno="655"
+     rv="None">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+       <usearg name="timeval" type="NullablePointer[GTimeVal]"/>
+     </useargs>
+  </use>
+  <use id="_1356" name="g_source_get_time"
+     ponyname="g_source_get_time"
+     fid="f82"
+     lineno="660"
+     rv="I64">
+     <useargs>
+       <usearg name="source" type="NullablePointer[GSource]"/>
+     </useargs>
+  </use>
+  <use id="_1357" name="g_idle_source_new"
+     ponyname="g_idle_source_new"
+     fid="f82"
+     lineno="669"
+     rv="NullablePointer[GSource]">
+     <useargs/>
+  </use>
+  <use id="_1358" name="g_child_watch_source_new"
+     ponyname="g_child_watch_source_new"
+     fid="f82"
+     lineno="671"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_1359" name="g_timeout_source_new"
+     ponyname="g_timeout_source_new"
+     fid="f82"
+     lineno="673"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="interval" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1360" name="g_timeout_source_new_seconds"
+     ponyname="g_timeout_source_new_seconds"
+     fid="f82"
+     lineno="675"
+     rv="NullablePointer[GSource]">
+     <useargs>
+       <usearg name="interval" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1361" name="g_get_current_time"
+     ponyname="g_get_current_time"
+     fid="f82"
+     lineno="681"
+     rv="None">
+     <useargs>
+       <usearg name="result" type="NullablePointer[GTimeVal]"/>
+     </useargs>
+  </use>
+  <use id="_1362" name="g_get_monotonic_time"
+     ponyname="g_get_monotonic_time"
+     fid="f82"
+     lineno="685"
+     rv="I64">
+     <useargs/>
+  </use>
+  <use id="_1363" name="g_get_real_time"
+     ponyname="g_get_real_time"
+     fid="f82"
+     lineno="687"
+     rv="I64">
+     <useargs/>
+  </use>
+  <use id="_1364" name="g_source_remove"
+     ponyname="g_source_remove"
+     fid="f82"
+     lineno="692"
+     rv="I32">
+     <useargs>
+       <usearg name="tag" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1365" name="g_source_remove_by_user_data"
+     ponyname="g_source_remove_by_user_data"
+     fid="f82"
+     lineno="694"
+     rv="I32">
+     <useargs>
+       <usearg name="userdata" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1366" name="g_source_remove_by_funcs_user_data"
+     ponyname="g_source_remove_by_funcs_user_data"
+     fid="f82"
+     lineno="696"
+     rv="I32">
+     <useargs>
+       <usearg name="funcs" type="NullablePointer[GSourceFuncs]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1368" name="g_clear_handle_id"
+     ponyname="g_clear_handle_id"
+     fid="f82"
+     lineno="713"
+     rv="None">
+     <useargs>
+       <usearg name="tagptr" type="Pointer[U32]"/>
+       <usearg name="clearfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1369" name="g_timeout_add_full"
+     ponyname="g_timeout_add_full"
+     fid="f82"
+     lineno="733"
+     rv="U32">
+     <useargs>
+       <usearg name="priority" type="I32"/>
+       <usearg name="interval" type="U32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="notify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1370" name="g_timeout_add"
+     ponyname="g_timeout_add"
+     fid="f82"
+     lineno="739"
+     rv="U32">
+     <useargs>
+       <usearg name="interval" type="U32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1371" name="g_timeout_add_seconds_full"
+     ponyname="g_timeout_add_seconds_full"
+     fid="f82"
+     lineno="743"
+     rv="U32">
+     <useargs>
+       <usearg name="priority" type="I32"/>
+       <usearg name="interval" type="U32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="notify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1372" name="g_timeout_add_seconds"
+     ponyname="g_timeout_add_seconds"
+     fid="f82"
+     lineno="749"
+     rv="U32">
+     <useargs>
+       <usearg name="interval" type="U32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1373" name="g_child_watch_add_full"
+     ponyname="g_child_watch_add_full"
+     fid="f82"
+     lineno="753"
+     rv="U32">
+     <useargs>
+       <usearg name="priority" type="I32"/>
+       <usearg name="pid" type="I32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="notify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1374" name="g_child_watch_add"
+     ponyname="g_child_watch_add"
+     fid="f82"
+     lineno="759"
+     rv="U32">
+     <useargs>
+       <usearg name="pid" type="I32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1375" name="g_idle_add"
+     ponyname="g_idle_add"
+     fid="f82"
+     lineno="763"
+     rv="U32">
+     <useargs>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1376" name="g_idle_add_full"
+     ponyname="g_idle_add_full"
+     fid="f82"
+     lineno="766"
+     rv="U32">
+     <useargs>
+       <usearg name="priority" type="I32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="notify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1377" name="g_idle_remove_by_data"
+     ponyname="g_idle_remove_by_data"
+     fid="f82"
+     lineno="771"
+     rv="I32">
+     <useargs>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1378" name="g_main_context_invoke_full"
+     ponyname="g_main_context_invoke_full"
+     fid="f82"
+     lineno="774"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="priority" type="I32"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+       <usearg name="notify" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_1379" name="g_main_context_invoke"
+     ponyname="g_main_context_invoke"
+     fid="f82"
+     lineno="780"
+     rv="None">
+     <useargs>
+       <usearg name="context" type="NullablePointer[GMainContext]"/>
+       <usearg name="function" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_16334" name="gtk_window_get_type"
+     ponyname="gtk_window_get_type"
+     fid="f454"
+     lineno="87"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_16335" name="gtk_window_new"
+     ponyname="gtk_window_new"
+     fid="f454"
+     lineno="89"
+     rv="NullablePointer[GtkWidget]">
+     <useargs/>
+  </use>
+  <use id="_16336" name="gtk_window_set_title"
+     ponyname="gtk_window_set_title"
+     fid="f454"
+     lineno="91"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="title" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16337" name="gtk_window_get_title"
+     ponyname="gtk_window_get_title"
+     fid="f454"
+     lineno="94"
+     rv="String">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16338" name="gtk_window_set_startup_id"
+     ponyname="gtk_window_set_startup_id"
+     fid="f454"
+     lineno="96"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="startupid" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16339" name="gtk_window_set_focus"
+     ponyname="gtk_window_set_focus"
+     fid="f454"
+     lineno="99"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="focus" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16340" name="gtk_window_get_focus"
+     ponyname="gtk_window_get_focus"
+     fid="f454"
+     lineno="102"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16341" name="gtk_window_set_default_widget"
+     ponyname="gtk_window_set_default_widget"
+     fid="f454"
+     lineno="104"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="defaultwidget" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16342" name="gtk_window_get_default_widget"
+     ponyname="gtk_window_get_default_widget"
+     fid="f454"
+     lineno="107"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16343" name="gtk_window_set_transient_for"
+     ponyname="gtk_window_set_transient_for"
+     fid="f454"
+     lineno="110"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="parent" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16344" name="gtk_window_get_transient_for"
+     ponyname="gtk_window_get_transient_for"
+     fid="f454"
+     lineno="113"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16345" name="gtk_window_set_destroy_with_parent"
+     ponyname="gtk_window_set_destroy_with_parent"
+     fid="f454"
+     lineno="115"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16346" name="gtk_window_get_destroy_with_parent"
+     ponyname="gtk_window_get_destroy_with_parent"
+     fid="f454"
+     lineno="118"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16347" name="gtk_window_set_hide_on_close"
+     ponyname="gtk_window_set_hide_on_close"
+     fid="f454"
+     lineno="120"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16348" name="gtk_window_get_hide_on_close"
+     ponyname="gtk_window_get_hide_on_close"
+     fid="f454"
+     lineno="123"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16349" name="gtk_window_set_mnemonics_visible"
+     ponyname="gtk_window_set_mnemonics_visible"
+     fid="f454"
+     lineno="125"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16350" name="gtk_window_get_mnemonics_visible"
+     ponyname="gtk_window_get_mnemonics_visible"
+     fid="f454"
+     lineno="128"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16351" name="gtk_window_set_focus_visible"
+     ponyname="gtk_window_set_focus_visible"
+     fid="f454"
+     lineno="130"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16352" name="gtk_window_get_focus_visible"
+     ponyname="gtk_window_get_focus_visible"
+     fid="f454"
+     lineno="133"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16353" name="gtk_window_set_resizable"
+     ponyname="gtk_window_set_resizable"
+     fid="f454"
+     lineno="136"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="resizable" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16354" name="gtk_window_get_resizable"
+     ponyname="gtk_window_get_resizable"
+     fid="f454"
+     lineno="139"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16355" name="gtk_window_set_display"
+     ponyname="gtk_window_set_display"
+     fid="f454"
+     lineno="142"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="display" type="NullablePointer[GdkDisplay]"/>
+     </useargs>
+  </use>
+  <use id="_16356" name="gtk_window_is_active"
+     ponyname="gtk_window_is_active"
+     fid="f454"
+     lineno="146"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16357" name="gtk_window_set_decorated"
+     ponyname="gtk_window_set_decorated"
+     fid="f454"
+     lineno="149"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16358" name="gtk_window_get_decorated"
+     ponyname="gtk_window_get_decorated"
+     fid="f454"
+     lineno="152"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16359" name="gtk_window_set_deletable"
+     ponyname="gtk_window_set_deletable"
+     fid="f454"
+     lineno="154"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16360" name="gtk_window_get_deletable"
+     ponyname="gtk_window_get_deletable"
+     fid="f454"
+     lineno="157"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16361" name="gtk_window_set_icon_name"
+     ponyname="gtk_window_set_icon_name"
+     fid="f454"
+     lineno="160"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16362" name="gtk_window_get_icon_name"
+     ponyname="gtk_window_get_icon_name"
+     fid="f454"
+     lineno="163"
+     rv="String">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16363" name="gtk_window_set_default_icon_name"
+     ponyname="gtk_window_set_default_icon_name"
+     fid="f454"
+     lineno="165"
+     rv="None">
+     <useargs>
+       <usearg name="name" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16364" name="gtk_window_get_default_icon_name"
+     ponyname="gtk_window_get_default_icon_name"
+     fid="f454"
+     lineno="167"
+     rv="String">
+     <useargs/>
+  </use>
+  <use id="_16365" name="gtk_window_set_auto_startup_notification"
+     ponyname="gtk_window_set_auto_startup_notification"
+     fid="f454"
+     lineno="170"
+     rv="None">
+     <useargs>
+       <usearg name="setting" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16366" name="gtk_window_set_modal"
+     ponyname="gtk_window_set_modal"
+     fid="f454"
+     lineno="174"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="modal" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16367" name="gtk_window_get_modal"
+     ponyname="gtk_window_get_modal"
+     fid="f454"
+     lineno="177"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16368" name="gtk_window_get_toplevels"
+     ponyname="gtk_window_get_toplevels"
+     fid="f454"
+     lineno="179"
+     rv="NullablePointer[GListModel]">
+     <useargs/>
+  </use>
+  <use id="_16369" name="gtk_window_list_toplevels"
+     ponyname="gtk_window_list_toplevels"
+     fid="f454"
+     lineno="181"
+     rv="NullablePointer[GList]">
+     <useargs/>
+  </use>
+  <use id="_16370" name="gtk_window_present"
+     ponyname="gtk_window_present"
+     fid="f454"
+     lineno="184"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16371" name="gtk_window_present_with_time"
+     ponyname="gtk_window_present_with_time"
+     fid="f454"
+     lineno="186"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="timestamp" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_16372" name="gtk_window_minimize"
+     ponyname="gtk_window_minimize"
+     fid="f454"
+     lineno="189"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16373" name="gtk_window_unminimize"
+     ponyname="gtk_window_unminimize"
+     fid="f454"
+     lineno="191"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16374" name="gtk_window_maximize"
+     ponyname="gtk_window_maximize"
+     fid="f454"
+     lineno="193"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16375" name="gtk_window_unmaximize"
+     ponyname="gtk_window_unmaximize"
+     fid="f454"
+     lineno="195"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16376" name="gtk_window_fullscreen"
+     ponyname="gtk_window_fullscreen"
+     fid="f454"
+     lineno="197"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16377" name="gtk_window_unfullscreen"
+     ponyname="gtk_window_unfullscreen"
+     fid="f454"
+     lineno="199"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16378" name="gtk_window_fullscreen_on_monitor"
+     ponyname="gtk_window_fullscreen_on_monitor"
+     fid="f454"
+     lineno="201"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="monitor" type="NullablePointer[GdkMonitor]"/>
+     </useargs>
+  </use>
+  <use id="_16379" name="gtk_window_close"
+     ponyname="gtk_window_close"
+     fid="f454"
+     lineno="204"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16380" name="gtk_window_set_default_size"
+     ponyname="gtk_window_set_default_size"
+     fid="f454"
+     lineno="210"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16381" name="gtk_window_get_default_size"
+     ponyname="gtk_window_get_default_size"
+     fid="f454"
+     lineno="214"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="width" type="Pointer[I32]"/>
+       <usearg name="height" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_16382" name="gtk_window_get_group"
+     ponyname="gtk_window_get_group"
+     fid="f454"
+     lineno="219"
+     rv="NullablePointer[GtkWindowGroup]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16383" name="gtk_window_has_group"
+     ponyname="gtk_window_has_group"
+     fid="f454"
+     lineno="221"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16384" name="gtk_window_get_application"
+     ponyname="gtk_window_get_application"
+     fid="f454"
+     lineno="225"
+     rv="NullablePointer[GtkApplication]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16385" name="gtk_window_set_application"
+     ponyname="gtk_window_set_application"
+     fid="f454"
+     lineno="227"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+     </useargs>
+  </use>
+  <use id="_16386" name="gtk_window_set_child"
+     ponyname="gtk_window_set_child"
+     fid="f454"
+     lineno="231"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="child" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16387" name="gtk_window_get_child"
+     ponyname="gtk_window_get_child"
+     fid="f454"
+     lineno="234"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16388" name="gtk_window_set_titlebar"
+     ponyname="gtk_window_set_titlebar"
+     fid="f454"
+     lineno="237"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="titlebar" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16389" name="gtk_window_get_titlebar"
+     ponyname="gtk_window_get_titlebar"
+     fid="f454"
+     lineno="240"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16390" name="gtk_window_is_maximized"
+     ponyname="gtk_window_is_maximized"
+     fid="f454"
+     lineno="243"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16391" name="gtk_window_is_fullscreen"
+     ponyname="gtk_window_is_fullscreen"
+     fid="f454"
+     lineno="246"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16392" name="gtk_window_destroy"
+     ponyname="gtk_window_destroy"
+     fid="f454"
+     lineno="249"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16393" name="gtk_window_set_interactive_debugging"
+     ponyname="gtk_window_set_interactive_debugging"
+     fid="f454"
+     lineno="252"
+     rv="None">
+     <useargs>
+       <usearg name="enable" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16394" name="gtk_window_set_handle_menubar_accel"
+     ponyname="gtk_window_set_handle_menubar_accel"
+     fid="f454"
+     lineno="255"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+       <usearg name="handlemenubaraccel" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16395" name="gtk_window_get_handle_menubar_accel"
+     ponyname="gtk_window_get_handle_menubar_accel"
+     fid="f454"
+     lineno="258"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16400" name="glib_autoptr_clear_GtkWindow"
+     ponyname="glib_autoptr_clear_GtkWindow"
+     fid="f454"
+     lineno="260"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_16401" name="glib_autoptr_cleanup_GtkWindow"
+     ponyname="glib_autoptr_cleanup_GtkWindow"
+     fid="f454"
+     lineno="260"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="Array[NullablePointer[GtkWidget]]"/>
+     </useargs>
+  </use>
+  <use id="_16402" name="glib_listautoptr_cleanup_GtkWindow"
+     ponyname="glib_listautoptr_cleanup_GtkWindow"
+     fid="f454"
+     lineno="260"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GList]]"/>
+     </useargs>
+  </use>
+  <use id="_16403" name="glib_slistautoptr_cleanup_GtkWindow"
+     ponyname="glib_slistautoptr_cleanup_GtkWindow"
+     fid="f454"
+     lineno="260"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GSList]]"/>
+     </useargs>
+  </use>
+  <use id="_16404" name="glib_queueautoptr_cleanup_GtkWindow"
+     ponyname="glib_queueautoptr_cleanup_GtkWindow"
+     fid="f454"
+     lineno="260"
+     rv="None">
+     <useargs>
+       <usearg name="q" type="Array[NullablePointer[GQueue]]"/>
+     </useargs>
+  </use>
+  <use id="_16409" name="glib_autoptr_clear_GtkWindowGroup"
+     ponyname="glib_autoptr_clear_GtkWindowGroup"
+     fid="f454"
+     lineno="261"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="NullablePointer[GtkWindowGroup]"/>
+     </useargs>
+  </use>
+  <use id="_16410" name="glib_autoptr_cleanup_GtkWindowGroup"
+     ponyname="glib_autoptr_cleanup_GtkWindowGroup"
+     fid="f454"
+     lineno="261"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="Array[NullablePointer[GtkWindowGroup]]"/>
+     </useargs>
+  </use>
+  <use id="_16411" name="glib_listautoptr_cleanup_GtkWindowGroup"
+     ponyname="glib_listautoptr_cleanup_GtkWindowGroup"
+     fid="f454"
+     lineno="261"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GList]]"/>
+     </useargs>
+  </use>
+  <use id="_16412" name="glib_slistautoptr_cleanup_GtkWindowGroup"
+     ponyname="glib_slistautoptr_cleanup_GtkWindowGroup"
+     fid="f454"
+     lineno="261"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GSList]]"/>
+     </useargs>
+  </use>
+  <use id="_16413" name="glib_queueautoptr_cleanup_GtkWindowGroup"
+     ponyname="glib_queueautoptr_cleanup_GtkWindowGroup"
+     fid="f454"
+     lineno="261"
+     rv="None">
+     <useargs>
+       <usearg name="q" type="Array[NullablePointer[GQueue]]"/>
+     </useargs>
+  </use>
+  <use id="_17149" name="gtk_button_get_type"
+     ponyname="gtk_button_get_type"
+     fid="f487"
+     lineno="78"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_17150" name="gtk_button_new"
+     ponyname="gtk_button_new"
+     fid="f487"
+     lineno="80"
+     rv="NullablePointer[GtkWidget]">
+     <useargs/>
+  </use>
+  <use id="_17151" name="gtk_button_new_with_label"
+     ponyname="gtk_button_new_with_label"
+     fid="f487"
+     lineno="82"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="label" type="String"/>
+     </useargs>
+  </use>
+  <use id="_17152" name="gtk_button_new_from_icon_name"
+     ponyname="gtk_button_new_from_icon_name"
+     fid="f487"
+     lineno="84"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="iconname" type="String"/>
+     </useargs>
+  </use>
+  <use id="_17153" name="gtk_button_new_with_mnemonic"
+     ponyname="gtk_button_new_with_mnemonic"
+     fid="f487"
+     lineno="86"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="label" type="String"/>
+     </useargs>
+  </use>
+  <use id="_17154" name="gtk_button_set_has_frame"
+     ponyname="gtk_button_set_has_frame"
+     fid="f487"
+     lineno="89"
+     rv="None">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+       <usearg name="hasframe" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_17155" name="gtk_button_get_has_frame"
+     ponyname="gtk_button_get_has_frame"
+     fid="f487"
+     lineno="92"
+     rv="I32">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+     </useargs>
+  </use>
+  <use id="_17156" name="gtk_button_set_label"
+     ponyname="gtk_button_set_label"
+     fid="f487"
+     lineno="94"
+     rv="None">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+       <usearg name="label" type="String"/>
+     </useargs>
+  </use>
+  <use id="_17157" name="gtk_button_get_label"
+     ponyname="gtk_button_get_label"
+     fid="f487"
+     lineno="97"
+     rv="String">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+     </useargs>
+  </use>
+  <use id="_17158" name="gtk_button_set_use_underline"
+     ponyname="gtk_button_set_use_underline"
+     fid="f487"
+     lineno="99"
+     rv="None">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+       <usearg name="useunderline" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_17159" name="gtk_button_get_use_underline"
+     ponyname="gtk_button_get_use_underline"
+     fid="f487"
+     lineno="102"
+     rv="I32">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+     </useargs>
+  </use>
+  <use id="_17160" name="gtk_button_set_icon_name"
+     ponyname="gtk_button_set_icon_name"
+     fid="f487"
+     lineno="105"
+     rv="None">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+       <usearg name="iconname" type="String"/>
+     </useargs>
+  </use>
+  <use id="_17161" name="gtk_button_get_icon_name"
+     ponyname="gtk_button_get_icon_name"
+     fid="f487"
+     lineno="108"
+     rv="String">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+     </useargs>
+  </use>
+  <use id="_17162" name="gtk_button_set_child"
+     ponyname="gtk_button_set_child"
+     fid="f487"
+     lineno="111"
+     rv="None">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+       <usearg name="child" type="NullablePointer[GtkWidget]"/>
+     </useargs>
+  </use>
+  <use id="_17163" name="gtk_button_get_child"
+     ponyname="gtk_button_get_child"
+     fid="f487"
+     lineno="114"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="button" type="NullablePointer[GtkButton]"/>
+     </useargs>
+  </use></uses>
+</castxml2pony>
+
