@@ -1,5 +1,6 @@
 all:
 	ponyc .
+	./gtk4-playground
 
 #structs:
 #	time ../castxml2pony -x gtk4.xml -S

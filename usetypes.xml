@@ -1,0 +1,273 @@
+<typedefs>
+  <typedef name="String"
+    ponytypein="String"
+    ponytypeinconv=".cstring()"
+    ponytypeout="String"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]">
+    <ponytypeconvout>
+      <prefixs>
+        <prefix>var pcstring: Pointer[U8] = </prefix>
+      </prefixs>
+      <suffixes>
+        <suffix>let p: String iso = String.from_cstring(pcstring).clone()</suffix>
+        <suffix>consume p</suffix>
+      </suffixes>
+    </ponytypeconvout>
+  </typedef>
+
+  <typedef name="Array[String]"
+    ponytypein="Array[String]"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[U8]]"
+    structtype="Pointer[Pointer[U8]]"
+    structdef="Pointer[Pointer[U8]]"
+    argtype="Pointer[Pointer[U8]] tag"
+    rvtype="Pointer[Pointer[U8]]"/>
+
+  <typedef name="NullablePointer[GtkApplicationWindow]"
+    ponytypein="NullablePointer[GtkApplicationWindow] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkApplicationWindow]"
+    structtype="NullablePointer[GtkApplicationWindow]"
+    structdef="NullablePointer[GtkApplicationWindow].none()"
+    argtype="NullablePointer[GtkApplicationWindow] tag"
+    rvtype="NullablePointer[GtkApplicationWindow]"/>
+
+  <typedef name="Pointer[None]"
+    ponytypein="Pointer[None] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[None]"
+    structtype="Pointer[None]"
+    structdef="Pointer[None]"
+    argtype="Pointer[None] tag"
+    rvtype="Pointer[None]"/>
+
+  <typedef name="NullablePointer[GMenuModel]"
+    ponytypein="NullablePointer[GMenuModel] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GMenuModel]"
+    structtype="NullablePointer[GMenuModel]"
+    structdef="NullablePointer[GMenuModel].none()"
+    argtype="NullablePointer[GMenuModel] tag"
+    rvtype="NullablePointer[GMenuModel]"/>
+
+  <typedef name="I32"
+    ponytypein="I32"
+    ponytypeinconv=""
+    ponytypeout="I32"
+    structtype="I32"
+    structdef="I32(0)"
+    argtype="I32"
+    rvtype="I32"/>
+
+  <typedef name="U32"
+    ponytypein="U32"
+    ponytypeinconv=""
+    ponytypeout="U32"
+    structtype="U32"
+    structdef="U32(0)"
+    argtype="U32"
+    rvtype="U32"/>
+
+  <typedef name="NullablePointer[GDBusConnection]"
+    ponytypein="NullablePointer[GDBusConnection] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GDBusConnection]"
+    structtype="NullablePointer[GDBusConnection]"
+    structdef="NullablePointer[GDBusConnection].none()"
+    argtype="NullablePointer[GDBusConnection] tag"
+    rvtype="NullablePointer[GDBusConnection]"/>
+
+  <typedef name="NullablePointer[GtkWidget]"
+    ponytypein="NullablePointer[GtkWidget] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkWidget]"
+    structtype="NullablePointer[GtkWidget]"
+    structdef="NullablePointer[GtkWidget].none()"
+    argtype="NullablePointer[GtkWidget] tag"
+    rvtype="NullablePointer[GtkWidget]"/>
+
+  <typedef name="NullablePointer[GtkWindow]"
+    ponytypein="NullablePointer[GtkWindow] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkWindow]"
+    structtype="NullablePointer[GtkWindow]"
+    structdef="NullablePointer[GtkWindow].none()"
+    argtype="NullablePointer[GtkWindow] tag"
+    rvtype="NullablePointer[GtkWindow]"/>
+
+  <typedef name="NullablePointer[GCancellable]"
+    ponytypein="NullablePointer[GCancellable] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GCancellable]"
+    structtype="NullablePointer[GCancellable]"
+    structdef="NullablePointer[GCancellable].none()"
+    argtype="NullablePointer[GCancellable] tag"
+    rvtype="NullablePointer[GCancellable]"/>
+
+  <typedef name="NullablePointer[GActionGroup]"
+    ponytypein="NullablePointer[GActionGroup] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GActionGroup]"
+    structtype="NullablePointer[GActionGroup]"
+    structdef="NullablePointer[GActionGroup].none()"
+    argtype="NullablePointer[GActionGroup] tag"
+    rvtype="NullablePointer[GActionGroup]"/>
+
+  <typedef name="U64"
+    ponytypein="U64"
+    ponytypeinconv=""
+    ponytypeout="U64"
+    structtype="U64"
+    structdef="U64(0)"
+    argtype="U64"
+    rvtype="U64"/>
+
+  <typedef name="NullablePointer[GApplication]"
+    ponytypein="NullablePointer[GApplication] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GApplication]"
+    structtype="NullablePointer[GApplication]"
+    structdef="NullablePointer[GApplication].none()"
+    argtype="NullablePointer[GApplication] tag"
+    rvtype="NullablePointer[GApplication]"/>
+
+  <typedef name="NullablePointer[GList]"
+    ponytypein="NullablePointer[GList] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GList]"
+    structtype="NullablePointer[GList]"
+    structdef="NullablePointer[GList].none()"
+    argtype="NullablePointer[GList] tag"
+    rvtype="NullablePointer[GList]"/>
+
+  <typedef name="None"
+    ponytypein="None tag"
+    ponytypeinconv=""
+    ponytypeout="None"
+    structtype="None"
+    structdef="None"
+    argtype="None tag"
+    rvtype="None"/>
+
+  <typedef name="Array[NullablePointer[GQueue]]"
+    ponytypein="Array[NullablePointer[GQueue]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GQueue]]"
+    structtype="Array[NullablePointer[GQueue]]"
+    structdef="Array[NullablePointer[GQueue]]"
+    argtype="Array[NullablePointer[GQueue]] tag"
+    rvtype="Array[NullablePointer[GQueue]]"/>
+
+  <typedef name="NullablePointer[GtkShortcutsWindow]"
+    ponytypein="NullablePointer[GtkShortcutsWindow] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkShortcutsWindow]"
+    structtype="NullablePointer[GtkShortcutsWindow]"
+    structdef="NullablePointer[GtkShortcutsWindow].none()"
+    argtype="NullablePointer[GtkShortcutsWindow] tag"
+    rvtype="NullablePointer[GtkShortcutsWindow]"/>
+
+  <typedef name="NullablePointer[GMenu]"
+    ponytypein="NullablePointer[GMenu] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GMenu]"
+    structtype="NullablePointer[GMenu]"
+    structdef="NullablePointer[GMenu].none()"
+    argtype="NullablePointer[GMenu] tag"
+    rvtype="NullablePointer[GMenu]"/>
+
+  <typedef name="NullablePointer[GOptionGroup]"
+    ponytypein="NullablePointer[GOptionGroup] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GOptionGroup]"
+    structtype="NullablePointer[GOptionGroup]"
+    structdef="NullablePointer[GOptionGroup].none()"
+    argtype="NullablePointer[GOptionGroup] tag"
+    rvtype="NullablePointer[GOptionGroup]"/>
+
+  <typedef name="Array[NullablePointer[GList]]"
+    ponytypein="Array[NullablePointer[GList]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GList]]"
+    structtype="Array[NullablePointer[GList]]"
+    structdef="Array[NullablePointer[GList]]"
+    argtype="Array[NullablePointer[GList]] tag"
+    rvtype="Array[NullablePointer[GList]]"/>
+
+  <typedef name="Array[NullablePointer[GError]]"
+    ponytypein="Array[NullablePointer[GError]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GError]]"
+    structtype="Array[NullablePointer[GError]]"
+    structdef="Array[NullablePointer[GError]]"
+    argtype="Array[NullablePointer[GError]] tag"
+    rvtype="Array[NullablePointer[GError]]"/>
+
+  <typedef name="NullablePointer[GtkApplication]"
+    ponytypein="NullablePointer[GtkApplication] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GtkApplication]"
+    structtype="NullablePointer[GtkApplication]"
+    structdef="NullablePointer[GtkApplication].none()"
+    argtype="NullablePointer[GtkApplication] tag"
+    rvtype="NullablePointer[GtkApplication]"/>
+
+  <typedef name="Array[NullablePointer[GSList]]"
+    ponytypein="Array[NullablePointer[GSList]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GSList]]"
+    structtype="Array[NullablePointer[GSList]]"
+    structdef="Array[NullablePointer[GSList]]"
+    argtype="Array[NullablePointer[GSList]] tag"
+    rvtype="Array[NullablePointer[GSList]]"/>
+
+  <typedef name="U8"
+    ponytypein="U8"
+    ponytypeinconv=""
+    ponytypeout="U8"
+    structtype="U8"
+    structdef="U8(0)"
+    argtype="U8"
+    rvtype="U8"/>
+
+  <typedef name="Array[NullablePointer[GtkApplication]]"
+    ponytypein="Array[NullablePointer[GtkApplication]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GtkApplication]]"
+    structtype="Array[NullablePointer[GtkApplication]]"
+    structdef="Array[NullablePointer[GtkApplication]]"
+    argtype="Array[NullablePointer[GtkApplication]] tag"
+    rvtype="Array[NullablePointer[GtkApplication]]"/>
+
+  <typedef name="NullablePointer[GNotification]"
+    ponytypein="NullablePointer[GNotification] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GNotification]"
+    structtype="NullablePointer[GNotification]"
+    structdef="NullablePointer[GNotification].none()"
+    argtype="NullablePointer[GNotification] tag"
+    rvtype="NullablePointer[GNotification]"/>
+
+  <typedef name="Array[NullablePointer[GFile]]"
+    ponytypein="Array[NullablePointer[GFile]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[GFile]]"
+    structtype="Array[NullablePointer[GFile]]"
+    structdef="Array[NullablePointer[GFile]]"
+    argtype="Array[NullablePointer[GFile]] tag"
+    rvtype="Array[NullablePointer[GFile]]"/>
+
+  <typedef name="NullablePointer[GOptionEntry]"
+    ponytypein="NullablePointer[GOptionEntry] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[GOptionEntry]"
+    structtype="NullablePointer[GOptionEntry]"
+    structdef="NullablePointer[GOptionEntry].none()"
+    argtype="NullablePointer[GOptionEntry] tag"
+    rvtype="NullablePointer[GOptionEntry]"/>
+</typedefs>
+

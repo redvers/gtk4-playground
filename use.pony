@@ -383,7 +383,8 @@ use @g_signal_connect_closure[U64](instance: Pointer[None] tag, detailedsignal: 
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [Enumeration size=32,fid: f138]
 */
-use @g_signal_connect_data[U64](instance: Pointer[None] tag, detailedsignal: Pointer[U8] tag, chandler: NullablePointer[FUNCTIONTYPE] tag, data: Pointer[None] tag, destroydata: NullablePointer[FUNCTIONTYPE] tag, connectflags: I32)
+//use @g_signal_connect_data[U64](instance: Pointer[None] tag, detailedsignal: Pointer[U8] tag, chandler: NullablePointer[FUNCTIONTYPE] tag, data: Pointer[None] tag, destroydata: NullablePointer[FUNCTIONTYPE] tag, connectflags: I32)
+use @g_signal_connect_data[U64](instance: Pointer[None] tag, detailedsignal: Pointer[U8] tag, ...)
 
 
 
@@ -3639,7 +3640,7 @@ use @g_main_context_unref[None](context: NullablePointer[GMainContext] tag)
 
   Arguments:
 */
-use @g_main_context_default[NullablePointer[GMainContext]]()
+use @g_main_context_default[NullablePointer[GMainContext] iso^]()
 
 
 
@@ -4825,7 +4826,7 @@ use @g_main_context_invoke_full[None](context: NullablePointer[GMainContext] tag
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_main_context_invoke[None](context: NullablePointer[GMainContext] tag, function: NullablePointer[FUNCTIONTYPE] tag, data: Pointer[None] tag)
+use @g_main_context_invoke[None](context: NullablePointer[GMainContext] tag, function: @{(): None}, data: Pointer[None] tag)
 
 
 
@@ -5532,7 +5533,7 @@ use @gtk_window_set_application[None](window: NullablePointer[GtkWidget] tag, ap
     [PointerType size=64]->[Struct size=256,fid: f454]
     [PointerType size=64]->[Struct size=256,fid: f452]
 */
-use @gtk_window_set_child[None](window: NullablePointer[GtkWidget] tag, child: NullablePointer[GtkWidget] tag)
+use @gtk_window_set_child[None](window: NullablePointer[GtkWidget] tag, child: Pointer[None] tag)
 
 
 
@@ -5818,7 +5819,7 @@ use @gtk_button_new[NullablePointer[GtkWidget]]()
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @gtk_button_new_with_label[NullablePointer[GtkWidget]](label: Pointer[U8] tag)
+use @gtk_button_new_with_label[Pointer[GtkWidget]](label: Pointer[U8] tag)
 
 
 

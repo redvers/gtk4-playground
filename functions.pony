@@ -389,6 +389,8 @@ primitive Gtk4
   fun g_signal_connect_data(instance: Pointer[None] tag, detailedsignal: String, chandler: NullablePointer[FUNCTIONTYPE] tag, data: Pointer[None] tag, destroydata: NullablePointer[FUNCTIONTYPE] tag, connectflags: I32): U64 =>
     @g_signal_connect_data(instance, detailedsignal.cstring(), chandler, data, destroydata, connectflags)
 
+  fun g_signal_connect_app(instance: NullablePointer[GtkApplication] tag, detailedsignal: String, chandler: @{(NullablePointer[GtkApplication], None): None}): U64 =>
+    @g_signal_connect_data(instance, detailedsignal.cstring(), chandler, Pointer[None], Pointer[None], I32(0))
 
 /*
   Source: /nix/store/b2fbjmfynng5an3nsb2f1286zpxs5vyh-glib-2.68.3-dev/include/glib-2.0/gobject/gsignal.h:404
@@ -4882,7 +4884,7 @@ primitive Gtk4
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-  fun g_main_context_invoke(context: NullablePointer[GMainContext] tag, function: NullablePointer[FUNCTIONTYPE] tag, data: Pointer[None] tag): None =>
+  fun g_main_context_invoke(context: NullablePointer[GMainContext] tag, function: @{(): None}, data: Pointer[None] tag): None =>
     @g_main_context_invoke(context, function, data)
 
 
@@ -5595,7 +5597,7 @@ primitive Gtk4
     [PointerType size=64]->[Struct size=256,fid: f454]
     [PointerType size=64]->[Struct size=256,fid: f452]
 */
-  fun gtk_window_set_child(window: NullablePointer[GtkWidget] tag, child: NullablePointer[GtkWidget] tag): None =>
+  fun gtk_window_set_child(window: NullablePointer[GtkWidget] tag, child: Pointer[GtkWidget] tag): None =>
     @gtk_window_set_child(window, child)
 
 
@@ -5881,7 +5883,7 @@ primitive Gtk4
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-  fun gtk_button_new_with_label(label: String): NullablePointer[GtkWidget] =>
+  fun gtk_button_new_with_label(label: String): Pointer[GtkWidget] =>
     @gtk_button_new_with_label(label.cstring())
 
 

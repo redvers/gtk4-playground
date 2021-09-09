@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./renderuse.xml"/>
+<xi:include href="./usetypes.xml"/>
+<xi:include href="./xmlsrcs/gtk4.xml"/>
+                    <uses>
+                      <use id="_16625" name="gtk_application_window_get_type"
+     ponyname="gtk_application_window_get_type"
+     fid="f469"
+     lineno="65"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_16626" name="gtk_application_window_new"
+     ponyname="gtk_application_window_new"
+     fid="f469"
+     lineno="67"
+     rv="NullablePointer[GtkWidget]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+     </useargs>
+  </use>
+  <use id="_16627" name="gtk_application_window_set_show_menubar"
+     ponyname="gtk_application_window_set_show_menubar"
+     fid="f469"
+     lineno="70"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkApplicationWindow]"/>
+       <usearg name="showmenubar" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16628" name="gtk_application_window_get_show_menubar"
+     ponyname="gtk_application_window_get_show_menubar"
+     fid="f469"
+     lineno="73"
+     rv="I32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkApplicationWindow]"/>
+     </useargs>
+  </use>
+  <use id="_16629" name="gtk_application_window_get_id"
+     ponyname="gtk_application_window_get_id"
+     fid="f469"
+     lineno="76"
+     rv="U32">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkApplicationWindow]"/>
+     </useargs>
+  </use>
+  <use id="_16630" name="gtk_application_window_set_help_overlay"
+     ponyname="gtk_application_window_set_help_overlay"
+     fid="f469"
+     lineno="79"
+     rv="None">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkApplicationWindow]"/>
+       <usearg name="helpoverlay" type="NullablePointer[GtkShortcutsWindow]"/>
+     </useargs>
+  </use>
+  <use id="_16631" name="gtk_application_window_get_help_overlay"
+     ponyname="gtk_application_window_get_help_overlay"
+     fid="f469"
+     lineno="83"
+     rv="NullablePointer[GtkShortcutsWindow]">
+     <useargs>
+       <usearg name="window" type="NullablePointer[GtkApplicationWindow]"/>
+     </useargs>
+  </use>
+  <use id="_16299" name="gtk_application_get_type"
+     ponyname="gtk_application_get_type"
+     fid="f457"
+     lineno="72"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_16300" name="gtk_application_new"
+     ponyname="gtk_application_new"
+     fid="f457"
+     lineno="75"
+     rv="NullablePointer[GtkApplication]">
+     <useargs>
+       <usearg name="applicationid" type="String"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_16301" name="gtk_application_add_window"
+     ponyname="gtk_application_add_window"
+     fid="f457"
+     lineno="79"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="window" type="NullablePointer[GtkWindow]"/>
+     </useargs>
+  </use>
+  <use id="_16302" name="gtk_application_remove_window"
+     ponyname="gtk_application_remove_window"
+     fid="f457"
+     lineno="83"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="window" type="NullablePointer[GtkWindow]"/>
+     </useargs>
+  </use>
+  <use id="_16303" name="gtk_application_get_windows"
+     ponyname="gtk_application_get_windows"
+     fid="f457"
+     lineno="86"
+     rv="NullablePointer[GList]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+     </useargs>
+  </use>
+  <use id="_16304" name="gtk_application_get_menubar"
+     ponyname="gtk_application_get_menubar"
+     fid="f457"
+     lineno="89"
+     rv="NullablePointer[GMenuModel]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+     </useargs>
+  </use>
+  <use id="_16305" name="gtk_application_set_menubar"
+     ponyname="gtk_application_set_menubar"
+     fid="f457"
+     lineno="91"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="menubar" type="NullablePointer[GMenuModel]"/>
+     </useargs>
+  </use>
+  <use id="_16308" name="gtk_application_inhibit"
+     ponyname="gtk_application_inhibit"
+     fid="f457"
+     lineno="103"
+     rv="U32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="window" type="NullablePointer[GtkWindow]"/>
+       <usearg name="flags" type="I32"/>
+       <usearg name="reason" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16309" name="gtk_application_uninhibit"
+     ponyname="gtk_application_uninhibit"
+     fid="f457"
+     lineno="108"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="cookie" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_16310" name="gtk_application_get_window_by_id"
+     ponyname="gtk_application_get_window_by_id"
+     fid="f457"
+     lineno="112"
+     rv="NullablePointer[GtkWindow]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="id" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_16311" name="gtk_application_get_active_window"
+     ponyname="gtk_application_get_active_window"
+     fid="f457"
+     lineno="116"
+     rv="NullablePointer[GtkWindow]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+     </useargs>
+  </use>
+  <use id="_16312" name="gtk_application_list_action_descriptions"
+     ponyname="gtk_application_list_action_descriptions"
+     fid="f457"
+     lineno="119"
+     rv="Array[String]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+     </useargs>
+  </use>
+  <use id="_16313" name="gtk_application_get_accels_for_action"
+     ponyname="gtk_application_get_accels_for_action"
+     fid="f457"
+     lineno="122"
+     rv="Array[String]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="detailedactionname" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16314" name="gtk_application_get_actions_for_accel"
+     ponyname="gtk_application_get_actions_for_accel"
+     fid="f457"
+     lineno="125"
+     rv="Array[String]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="accel" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16315" name="gtk_application_set_accels_for_action"
+     ponyname="gtk_application_set_accels_for_action"
+     fid="f457"
+     lineno="130"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="detailedactionname" type="String"/>
+       <usearg name="accels" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_16316" name="gtk_application_get_menu_by_id"
+     ponyname="gtk_application_get_menu_by_id"
+     fid="f457"
+     lineno="135"
+     rv="NullablePointer[GMenu]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GtkApplication]"/>
+       <usearg name="id" type="String"/>
+     </useargs>
+  </use>
+  <use id="_16321" name="glib_autoptr_clear_GtkApplication"
+     ponyname="glib_autoptr_clear_GtkApplication"
+     fid="f457"
+     lineno="138"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="NullablePointer[GtkApplication]"/>
+     </useargs>
+  </use>
+  <use id="_16322" name="glib_autoptr_cleanup_GtkApplication"
+     ponyname="glib_autoptr_cleanup_GtkApplication"
+     fid="f457"
+     lineno="138"
+     rv="None">
+     <useargs>
+       <usearg name="ptr" type="Array[NullablePointer[GtkApplication]]"/>
+     </useargs>
+  </use>
+  <use id="_16323" name="glib_listautoptr_cleanup_GtkApplication"
+     ponyname="glib_listautoptr_cleanup_GtkApplication"
+     fid="f457"
+     lineno="138"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GList]]"/>
+     </useargs>
+  </use>
+  <use id="_16324" name="glib_slistautoptr_cleanup_GtkApplication"
+     ponyname="glib_slistautoptr_cleanup_GtkApplication"
+     fid="f457"
+     lineno="138"
+     rv="None">
+     <useargs>
+       <usearg name="l" type="Array[NullablePointer[GSList]]"/>
+     </useargs>
+  </use>
+  <use id="_16325" name="glib_queueautoptr_cleanup_GtkApplication"
+     ponyname="glib_queueautoptr_cleanup_GtkApplication"
+     fid="f457"
+     lineno="138"
+     rv="None">
+     <useargs>
+       <usearg name="q" type="Array[NullablePointer[GQueue]]"/>
+     </useargs>
+  </use>
+  <use id="_4480" name="g_application_get_type"
+     ponyname="g_application_get_type"
+     fid="f165"
+     lineno="122"
+     rv="U64">
+     <useargs/>
+  </use>
+  <use id="_4481" name="g_application_id_is_valid"
+     ponyname="g_application_id_is_valid"
+     fid="f165"
+     lineno="125"
+     rv="I32">
+     <useargs>
+       <usearg name="applicationid" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4482" name="g_application_new"
+     ponyname="g_application_new"
+     fid="f165"
+     lineno="128"
+     rv="NullablePointer[GApplication]">
+     <useargs>
+       <usearg name="applicationid" type="String"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_4483" name="g_application_get_application_id"
+     ponyname="g_application_get_application_id"
+     fid="f165"
+     lineno="132"
+     rv="String">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4484" name="g_application_set_application_id"
+     ponyname="g_application_set_application_id"
+     fid="f165"
+     lineno="134"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="applicationid" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4485" name="g_application_get_dbus_connection"
+     ponyname="g_application_get_dbus_connection"
+     fid="f165"
+     lineno="138"
+     rv="NullablePointer[GDBusConnection]">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4486" name="g_application_get_dbus_object_path"
+     ponyname="g_application_get_dbus_object_path"
+     fid="f165"
+     lineno="140"
+     rv="String">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4487" name="g_application_get_inactivity_timeout"
+     ponyname="g_application_get_inactivity_timeout"
+     fid="f165"
+     lineno="143"
+     rv="U32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4488" name="g_application_set_inactivity_timeout"
+     ponyname="g_application_set_inactivity_timeout"
+     fid="f165"
+     lineno="145"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="inactivitytimeout" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_4489" name="g_application_get_flags"
+     ponyname="g_application_get_flags"
+     fid="f165"
+     lineno="149"
+     rv="I32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4490" name="g_application_set_flags"
+     ponyname="g_application_set_flags"
+     fid="f165"
+     lineno="151"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="flags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_4491" name="g_application_get_resource_base_path"
+     ponyname="g_application_get_resource_base_path"
+     fid="f165"
+     lineno="155"
+     rv="String">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4492" name="g_application_set_resource_base_path"
+     ponyname="g_application_set_resource_base_path"
+     fid="f165"
+     lineno="157"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="resourcepath" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4493" name="g_application_set_action_group"
+     ponyname="g_application_set_action_group"
+     fid="f165"
+     lineno="161"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="actiongroup" type="NullablePointer[GActionGroup]"/>
+     </useargs>
+  </use>
+  <use id="_4494" name="g_application_add_main_option_entries"
+     ponyname="g_application_add_main_option_entries"
+     fid="f165"
+     lineno="165"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="entries" type="NullablePointer[GOptionEntry]"/>
+     </useargs>
+  </use>
+  <use id="_4495" name="g_application_add_main_option"
+     ponyname="g_application_add_main_option"
+     fid="f165"
+     lineno="169"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="longname" type="String"/>
+       <usearg name="shortname" type="U8"/>
+       <usearg name="flags" type="I32"/>
+       <usearg name="arg" type="I32"/>
+       <usearg name="description" type="String"/>
+       <usearg name="argdescription" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4496" name="g_application_add_option_group"
+     ponyname="g_application_add_option_group"
+     fid="f165"
+     lineno="177"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="group" type="NullablePointer[GOptionGroup]"/>
+     </useargs>
+  </use>
+  <use id="_4497" name="g_application_set_option_context_parameter_string"
+     ponyname="g_application_set_option_context_parameter_string"
+     fid="f165"
+     lineno="180"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="parameterstring" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4498" name="g_application_set_option_context_summary"
+     ponyname="g_application_set_option_context_summary"
+     fid="f165"
+     lineno="183"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="summary" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4499" name="g_application_set_option_context_description"
+     ponyname="g_application_set_option_context_description"
+     fid="f165"
+     lineno="186"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="description" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4500" name="g_application_get_is_registered"
+     ponyname="g_application_get_is_registered"
+     fid="f165"
+     lineno="189"
+     rv="I32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4501" name="g_application_get_is_remote"
+     ponyname="g_application_get_is_remote"
+     fid="f165"
+     lineno="191"
+     rv="I32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4502" name="g_application_register"
+     ponyname="g_application_register"
+     fid="f165"
+     lineno="194"
+     rv="I32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="cancellable" type="NullablePointer[GCancellable]"/>
+       <usearg name="terror" type="Array[NullablePointer[GError]]"/>
+     </useargs>
+  </use>
+  <use id="_4503" name="g_application_hold"
+     ponyname="g_application_hold"
+     fid="f165"
+     lineno="199"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4504" name="g_application_release"
+     ponyname="g_application_release"
+     fid="f165"
+     lineno="201"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4505" name="g_application_activate"
+     ponyname="g_application_activate"
+     fid="f165"
+     lineno="204"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4506" name="g_application_open"
+     ponyname="g_application_open"
+     fid="f165"
+     lineno="207"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="files" type="Array[NullablePointer[GFile]]"/>
+       <usearg name="nfiles" type="I32"/>
+       <usearg name="hint" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4507" name="g_application_run"
+     ponyname="g_application_run"
+     fid="f165"
+     lineno="213"
+     rv="I32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="argc" type="I32"/>
+       <usearg name="argv" type="Array[String]"/>
+     </useargs>
+  </use>
+  <use id="_4508" name="g_application_quit"
+     ponyname="g_application_quit"
+     fid="f165"
+     lineno="218"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4509" name="g_application_get_default"
+     ponyname="g_application_get_default"
+     fid="f165"
+     lineno="221"
+     rv="NullablePointer[GApplication]">
+     <useargs/>
+  </use>
+  <use id="_4510" name="g_application_set_default"
+     ponyname="g_application_set_default"
+     fid="f165"
+     lineno="223"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4511" name="g_application_mark_busy"
+     ponyname="g_application_mark_busy"
+     fid="f165"
+     lineno="226"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4512" name="g_application_unmark_busy"
+     ponyname="g_application_unmark_busy"
+     fid="f165"
+     lineno="228"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4513" name="g_application_get_is_busy"
+     ponyname="g_application_get_is_busy"
+     fid="f165"
+     lineno="230"
+     rv="I32">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+     </useargs>
+  </use>
+  <use id="_4514" name="g_application_send_notification"
+     ponyname="g_application_send_notification"
+     fid="f165"
+     lineno="233"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="id" type="String"/>
+       <usearg name="notification" type="NullablePointer[GNotification]"/>
+     </useargs>
+  </use>
+  <use id="_4515" name="g_application_withdraw_notification"
+     ponyname="g_application_withdraw_notification"
+     fid="f165"
+     lineno="237"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="id" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4516" name="g_application_bind_busy_property"
+     ponyname="g_application_bind_busy_property"
+     fid="f165"
+     lineno="241"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="tobject" type="Pointer[None]"/>
+       <usearg name="property" type="String"/>
+     </useargs>
+  </use>
+  <use id="_4517" name="g_application_unbind_busy_property"
+     ponyname="g_application_unbind_busy_property"
+     fid="f165"
+     lineno="246"
+     rv="None">
+     <useargs>
+       <usearg name="application" type="NullablePointer[GApplication]"/>
+       <usearg name="tobject" type="Pointer[None]"/>
+       <usearg name="property" type="String"/>
+     </useargs>
+  </use></uses>
+</castxml2pony>
+
